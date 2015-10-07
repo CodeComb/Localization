@@ -33,11 +33,9 @@ namespace CodeComb.AspNet.Localization.EntityFramework
         {
             var ret = new Dictionary<string, string>();
             foreach (var x in src)
-                try
-                {
-                    ret.Add(x.Key, x.Value);
-                }
-                catch { }
+            {
+                ret[x.Key] = x.Value;
+            }
             return ret;
         }
 
@@ -65,10 +63,20 @@ namespace CodeComb.AspNet.Localization.EntityFramework
 
         public override void RemoveString(string Identifier)
         {
+            foreach (var x in _Collection)
+            {
+                try
+                {
+                    x.LocalizedStrings.Remove(Identifier);
+                }
+                catch
+                {
+                }
+            }
+
             var src = _DbContext.LocalizationString
                 .Where(x => x.Key == Identifier)
                 .ToList();
-
             foreach(var x in src)
             {
                 _DbContext.LocalizationString.Remove(x);

@@ -9,6 +9,7 @@ using Microsoft.Extensions.Primitives;
 using Microsoft.Dnx.Runtime;
 using Microsoft.Dnx.Runtime.Infrastructure;
 using Microsoft.Data.Entity;
+using Microsoft.Data.Entity.Storage.Internal;
 using CodeComb.AspNet.Localization.EntityFramework;
 using Xunit;
 using Moq;
@@ -19,6 +20,7 @@ namespace CodeComb.AspNet.Localization.Tests
     {
         private void BuildSampleData(IServiceProvider service)
         {
+            service.GetRequiredService<IInMemoryStore>().Clear();
             var db = service.GetRequiredService<ILocalizationDbContext<Guid>>();
             if (db.Database != null && db.Database.EnsureCreated())
             {
