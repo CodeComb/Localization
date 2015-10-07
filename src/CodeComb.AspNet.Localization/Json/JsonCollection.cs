@@ -15,23 +15,16 @@ namespace CodeComb.AspNet.Localization.Json
 
         public List<CultureInfo> _Collection { get; set; }
 
-        public override string this[string culture, string identifier, params object[] objects]
+        public override void SetString(string culture, string identifier, string Content)
         {
-            get
-            {
-                return base[culture, identifier, objects];
-            }
-            set
-            {
-                var obj = _Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
-                if (obj == null)
-                    throw new FileNotFoundException();
-                obj.LocalizedStrings[identifier] = value;
-                var path = obj.Identifier;
-                obj.Identifier = null;
-                var json = JsonConvert.SerializeObject(obj);
-                File.WriteAllText(path, json);
-            }
+            var obj = _Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
+            if (obj == null)
+                throw new FileNotFoundException();
+            obj.LocalizedStrings[identifier] = Content;
+            var path = obj.Identifier;
+            obj.Identifier = null;
+            var json = JsonConvert.SerializeObject(obj);
+            File.WriteAllText(path, json);
         }
 
         public JsonCollection(string resourcesPath, IRequestCultureProvider cultureProvider, IApplicationEnvironment env) : base(cultureProvider)

@@ -71,28 +71,21 @@ namespace CodeComb.AspNet.Localization.EntityFramework
             _DbContext.SaveChanges();
         }
 
-        public override string this[string culture, string identifier, params object[] objects]
+        public override void SetString(string culture, string identifier, string Content)
         {
-            get
+            var obj = _Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
+            if (obj == null)
+                throw new KeyNotFoundException();
+            obj.LocalizedStrings[identifier] = Content;
+            var id = obj.Identifier;
+            var str = _DbContext.LocalizationString
+                .Where(x => x.CultureInfoId.Equals(id) && x.Key == identifier)
+                .ToList();
+            foreach (var x in str)
             {
-                return base[culture, identifier, objects];
+                x.Value = Content;
             }
-            set
-            {
-                var obj = _Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
-                if (obj == null)
-                    throw new KeyNotFoundException();
-                obj.LocalizedStrings[identifier] = value;
-                var id = obj.Identifier;
-                var str = _DbContext.LocalizationString
-                    .Where(x => x.CultureInfoId.Equals(id) && x.Key == identifier)
-                    .ToList();
-                foreach (var x in str)
-                {
-                    x.Value = value;
-                }
-                _DbContext.SaveChanges();
-            }
+            _DbContext.SaveChanges();
         }
     }
 }

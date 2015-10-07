@@ -25,27 +25,7 @@ namespace CodeComb.AspNet.Localization
         {
             get
             {
-                return this[SingleCulture(CultureProvider.DetermineRequestCulture()), identifier, objects];
-            }
-        }
-
-        public virtual string this[string culture, string identifier, params object[] objects]
-        {
-            get
-            {
-                var cultureInfo = Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
-                if (cultureInfo == null)
-                    cultureInfo = Collection.Where(x => x.IsDefault).FirstOrDefault();
-                if (cultureInfo == null)
-                    throw new FileNotFoundException();
-                return string.Format(cultureInfo.LocalizedStrings[identifier], objects);
-            }
-            set
-            {
-                var obj = Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
-                if (obj == null)
-                    throw new FileNotFoundException();
-                obj.LocalizedStrings[identifier] = value;
+                return this.GetString(SingleCulture(CultureProvider.DetermineRequestCulture()), identifier, objects);
             }
         }
 
@@ -66,6 +46,24 @@ namespace CodeComb.AspNet.Localization
                 }
             }
             return Collection.Where(y => y.IsDefault).First().Cultures.First();
+        }
+
+        public virtual string GetString(string culture, string identifier, params object[] objects)
+        {
+            var cultureInfo = Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
+            if (cultureInfo == null)
+                cultureInfo = Collection.Where(x => x.IsDefault).FirstOrDefault();
+            if (cultureInfo == null)
+                throw new FileNotFoundException();
+            return string.Format(cultureInfo.LocalizedStrings[identifier], objects);
+        }
+
+        public virtual void SetString(string culture, string identifier, string Content)
+        {
+            var obj = Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
+            if (obj == null)
+                throw new FileNotFoundException();
+            obj.LocalizedStrings[identifier] = Content;
         }
     }
 }

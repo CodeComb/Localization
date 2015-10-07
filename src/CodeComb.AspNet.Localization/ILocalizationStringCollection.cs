@@ -9,7 +9,8 @@ namespace CodeComb.AspNet.Localization
     {
         IList<CultureInfo> Collection { get; }
         string this[string identifier, params object[] objects] { get; }
-        string this[string culture, string identifier, params object[] objects] { get; set; }
+        string GetString(string culture, string identifier, params object[] objects);
+        void SetString(string culture, string identifier, string Content);
         void Refresh();
         void RemoveString(string Identifier);
         string SingleCulture(string[] cultures);
