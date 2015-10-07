@@ -36,5 +36,5 @@ CALL packages\KoreBuild\build\dnvm install default -runtime CoreCLR -arch x86
 
 :run
 CALL packages\KoreBuild\build\dnvm use default -runtime CLR -arch x86
-CALL packages\KoreBuild\build\dnu pack --out ../../Publish --configuration release --quiet
+CALL dnu pack --out ../../Publish --configuration release --quiet
 packages\Sake\tools\Sake.exe -I packages\KoreBuild\build -f makefile.shade %*
