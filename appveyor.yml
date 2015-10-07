@@ -4,9 +4,3 @@ build_script:
   - build.cmd --quiet --parallel verify
 clone_depth: 1
 test: off
-deploy:
-  provider: NuGet
-  api_key:
-    secure: k2iZo0c7eEiOYTpqYnggRQ==
-  skip_symbols: false
-  artifact: /.*\.nupkg/
