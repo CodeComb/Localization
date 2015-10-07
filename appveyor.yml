@@ -5,7 +5,7 @@ build_script:
 clone_depth: 1
 test: off
 deploy:
-  provider: MyGet
+  provider: NuGet
   server: https://www.myget.org/F/codecomb/api/v2/package
   api_key: 
     secure: 4c734253-59d1-42ce-b664-ae292483fcf4
