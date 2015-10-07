@@ -34,8 +34,8 @@ if ! type dnvm > /dev/null 2>&1; then
 fi
 
 if ! type dnx > /dev/null 2>&1; then
-    dnvm install 1.0.0-rc1-15828 -u
-	dnvm use 1.0.0-rc1-15828
+    dnvm upgrade
 fi
 
 mono packages/Sake/tools/Sake.exe -I packages/KoreBuild/build -f makefile.shade "$@"
+
