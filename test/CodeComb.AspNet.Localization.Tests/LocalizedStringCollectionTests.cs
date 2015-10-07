@@ -11,7 +11,7 @@ namespace CodeComb.AspNet.Localization.Tests
     public class LocalizedStringCollectionTests
     {
         [Fact]
-        public void indexer_getter_test()
+        public void indexer_get_string_test()
         {
             // Arrange
             var info = new List<CultureInfo>

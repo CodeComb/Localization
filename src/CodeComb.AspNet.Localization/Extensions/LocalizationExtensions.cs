@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Mvc.Infrastructure;
+using Microsoft.Dnx.Runtime;
 using CodeComb.AspNet.Localization;
 using CodeComb.AspNet.Localization.EntityFramework;
 using CodeComb.AspNet.Localization.Json;
@@ -12,9 +13,9 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class LocalizationExtensions
     {
-        public static IServiceCollection AddJsonLocalization(this IServiceCollection self)
+        public static IServiceCollection AddJsonLocalization(this IServiceCollection self, string resourcePath = "/Localization")
         {
-            return self.AddSingleton<ILocalizationStringCollection, JsonCollection>();
+            return self.AddSingleton<ILocalizationStringCollection>(x => new JsonCollection(resourcePath, x.GetRequiredService<IRequestCultureProvider>(), x.GetRequiredService<IApplicationEnvironment>()));
         }
 
         public static IServiceCollection AddEFLocalization<TKey, TContext>(this IServiceCollection self)

@@ -1,13 +1,12 @@
 ﻿{
-  "Set": "zh-CN",
+  "Set": "en-US",
   "Cultures": [
-    "zh",
-    "zh-CN",
-    "zh-Hans"
+    "en",
+    "en-US"
   ],
-  "IsDefault": true,
+  "IsDefault": false,
   "LocalizedStrings": {
-    "Hello world.": "Hello world",
+    "Hello world.": "Hello world.",
     "Code Comb Co., Ltd.": "Code Comb Co., Ltd.",
     "My name is {0}.": "My name is {0}."
   }
