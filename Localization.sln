@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3DAAAB42-8CE0-4FA5-8659-993B3AE19A07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C606950B-70A9-4961-BA23-E851E6C538F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{FEBEEA88-1328-4B04-B145-308322802E45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4AEB5045-CFB2-42F2-B00C-5926381A773D}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		Nuget.config = Nuget.config
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CodeComb.AspNet.Localization", "src\CodeComb.AspNet.Localization\CodeComb.AspNet.Localization.xproj", "{9A312F08-E952-4FEA-9CEB-D490F0EB76B9}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CodeComb.AspNet.Localization.Tests", "test\CodeComb.AspNet.Localization.Tests\CodeComb.AspNet.Localization.Tests.xproj", "{3643631A-B473-44CD-85FD-FF1FDE0E3FF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A312F08-E952-4FEA-9CEB-D490F0EB76B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A312F08-E952-4FEA-9CEB-D490F0EB76B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A312F08-E952-4FEA-9CEB-D490F0EB76B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A312F08-E952-4FEA-9CEB-D490F0EB76B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3643631A-B473-44CD-85FD-FF1FDE0E3FF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3643631A-B473-44CD-85FD-FF1FDE0E3FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3643631A-B473-44CD-85FD-FF1FDE0E3FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3643631A-B473-44CD-85FD-FF1FDE0E3FF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A312F08-E952-4FEA-9CEB-D490F0EB76B9} = {3DAAAB42-8CE0-4FA5-8659-993B3AE19A07}
+		{3643631A-B473-44CD-85FD-FF1FDE0E3FF0} = {C606950B-70A9-4961-BA23-E851E6C538F9}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,92 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.IO;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Dnx.Runtime;
+using Newtonsoft.Json;
+
+namespace CodeComb.AspNet.Localization.Json
+{
+    public class JsonCollection : LocalizationStringCollection
+    {
+        private string _ResourcesPath { get; set; }
+
+        public List<CultureInfo> _Collection { get; set; }
+
+        public override string this[string culture, string identifier, params object[] objects]
+        {
+            get
+            {
+                return base[culture, identifier, objects];
+            }
+            set
+            {
+                var obj = _Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
+                if (obj == null)
+                    throw new FileNotFoundException();
+                obj.LocalizedStrings[identifier] = value;
+                var path = obj.Identifier;
+                obj.Identifier = null;
+                var json = JsonConvert.SerializeObject(obj);
+                File.WriteAllText(path, json);
+            }
+        }
+
+        public JsonCollection(string resourcesPath, IRequestCultureProvider cultureProvider, IApplicationEnvironment env) : base(cultureProvider)
+        {
+            _Collection = new List<CultureInfo>();
+            _ResourcesPath = env.ApplicationBasePath + resourcesPath;
+            Refresh();
+        }
+
+        public override IList<CultureInfo> Collection
+        {
+            get
+            {
+                return _Collection;
+            }
+        }
+
+        public override void Refresh()
+        {
+            _Collection.Clear();
+            var files = Directory.GetFiles(_ResourcesPath);
+            foreach (var file in files)
+            {
+                if (Path.GetExtension(file) == ".json")
+                {
+                    try
+                    {
+                        var json = JsonConvert.DeserializeObject<CultureInfo>(File.ReadAllText(file));
+                        json.Identifier = file;
+                        _Collection.Add(json);
+                    }
+                    catch
+                    {
+                    }
+                }
+            }
+        }
+
+        public override void RemoveString(string Identifier)
+        {
+            foreach(var x in _Collection)
+            {
+                try
+                {
+                    x.LocalizedStrings.Remove(Identifier);
+                }
+                catch
+                {
+                }
+                var obj = x;
+                var path = obj.Identifier;
+                obj.Identifier = null;
+                var json = JsonConvert.SerializeObject(obj);
+                File.WriteAllText(path, json);
+            }
+        }
+    }
+}
