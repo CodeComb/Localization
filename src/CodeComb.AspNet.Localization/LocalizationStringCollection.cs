@@ -55,7 +55,15 @@ namespace CodeComb.AspNet.Localization
                 cultureInfo = Collection.Where(x => x.IsDefault).FirstOrDefault();
             if (cultureInfo == null)
                 throw new FileNotFoundException();
-            return string.Format(cultureInfo.LocalizedStrings[identifier], objects);
+            try
+            {
+                var ret = string.Format(cultureInfo.LocalizedStrings[identifier], objects);
+                return ret;
+            }
+            catch
+            {
+                return string.Format(identifier, objects);
+            }
         }
 
         public virtual void SetString(string culture, string identifier, string Content)

@@ -22,7 +22,6 @@ namespace CodeComb.AspNet.Localization.Json
                 throw new FileNotFoundException();
             obj.LocalizedStrings[identifier] = Content;
             var path = obj.Identifier;
-            obj.Identifier = null;
             var json = JsonConvert.SerializeObject(obj);
             File.WriteAllText(path, json);
         }

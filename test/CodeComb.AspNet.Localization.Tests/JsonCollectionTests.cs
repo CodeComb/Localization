@@ -116,5 +116,86 @@ namespace CodeComb.AspNet.Localization.Tests
             Assert.Equal("你好，世界。", actual_1);
             Assert.Equal("我的名字是Yuuko", actual_2);
         }
+
+        [Fact]
+        public void set_string_test()
+        {
+            // Arrange
+            var req = new Mock<HttpRequest>();
+            req.Setup(x => x.Headers)
+                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", "writing-test" } }));
+            req.Setup(x => x.Cookies)
+                .Returns(new RequestCookiesCollection());
+            var httpContext = new Mock<HttpContext>();
+            httpContext.Setup(x => x.Request)
+                .Returns(req.Object);
+            var accessor = new Mock<IHttpContextAccessor>();
+            accessor.Setup(x => x.HttpContext)
+                .Returns(httpContext.Object);
+
+            var collection = new ServiceCollection();
+            collection.AddJsonLocalization()
+                .AddCookieCulture()
+                .AddInstance(accessor.Object)
+                .AddInstance(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+
+            var service = collection.BuildServiceProvider();
+
+            // Act 1
+            var SR = service.GetService<ILocalizationStringCollection>();
+            SR.SetString("writing-test", "Hello world.", "Hi, I am CodeComb.AspNet.Localization");
+            var actual_1 = SR["Hello world."];
+
+            // Assert 1
+            Assert.Equal("Hi, I am CodeComb.AspNet.Localization", actual_1);
+
+            // Act 2
+            SR.SetString("writing-test", "Hello world.", "你好，世界。");
+            var actual_2 = SR["Hello world."];
+
+            // Assert 2
+            Assert.Equal("你好，世界。", actual_2);
+        }
+
+        [Fact]
+        public void add_string_and_remove_test()
+        {
+            // Arrange
+            var req = new Mock<HttpRequest>();
+            req.Setup(x => x.Headers)
+                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", "writing-test" } }));
+            req.Setup(x => x.Cookies)
+                .Returns(new RequestCookiesCollection());
+            var httpContext = new Mock<HttpContext>();
+            httpContext.Setup(x => x.Request)
+                .Returns(req.Object);
+            var accessor = new Mock<IHttpContextAccessor>();
+            accessor.Setup(x => x.HttpContext)
+                .Returns(httpContext.Object);
+
+            var collection = new ServiceCollection();
+            collection.AddJsonLocalization()
+                .AddCookieCulture()
+                .AddInstance(accessor.Object)
+                .AddInstance(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+
+            var service = collection.BuildServiceProvider();
+
+            // Act 1
+            var SR = service.GetService<ILocalizationStringCollection>();
+            SR.SetString("writing-test", "Test", "I am xUnit.");
+            var actual_1 = SR["Test"];
+
+            // Assert 1
+            Assert.Equal("I am xUnit.", actual_1);
+
+            // Act 2
+            SR.RemoveString("Test");
+            var actual_2 = SR["Test"];
+
+            // Assert 2
+            Assert.Equal("Test", actual_2);
+        }
+
     }
 }
