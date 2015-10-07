@@ -10,4 +10,4 @@ os:
 before_script:
   - chmod ugo+x build.sh
 script:
-  - ./build.sh --quiet verify
+  - build.sh --quiet verify
