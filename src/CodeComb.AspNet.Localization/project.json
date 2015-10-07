@@ -1,10 +1,14 @@
 ﻿{
+  "title": "CodeComb.AspNet.Localization",
   "version": "1.0.0-*",
-  "description": "CodeComb.AspNet.Localization Class Library",
-  "authors": [ "Yuuko" ],
-  "tags": [ "" ],
-  "projectUrl": "",
+  "description": "ASP.Net vNext Localization Library",
+  "copyright": "Harbin Code Comb Technology Co.,Ltd",
+  "authors": [ "AmamiyaYuuko" ],
+  "tags": [ "Localization" ,"vNext", "ASP.Net", "MVC" ],
+  "iconUrl": "http://www.1234.sh/images/logo.png",
+  "projectUrl": "https://github.com/CodeComb/Localization",
   "licenseUrl": "",
+
 
   "dependencies": {
     "Microsoft.AspNet.Mvc": "6.0.0-*",
