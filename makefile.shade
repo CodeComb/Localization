@@ -1,3 +1,4 @@
+use namespace="System.Net"
 
 var VERSION='0.1'
 var FULL_VERSION='0.1'
@@ -5,6 +6,3 @@ var AUTHORS='Code Comb Co., Ltd.'
 
 use-standard-lifecycle
 k-standard-goals
-
-#xml-docs-test .clean .build-compile description='Check generated XML documentation files for errors' target='package'
-  k-xml-docs-test
