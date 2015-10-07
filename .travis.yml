@@ -1,5 +1,5 @@
 language: csharp
-sudo: false
+sudo: required
 mono:
   - beta
 env:
@@ -7,5 +7,7 @@ env:
 os:
   - linux
   - osx
+before_script:
+  - chmod ugo+x build.sh
 script:
   - ./build.sh --quiet verify
