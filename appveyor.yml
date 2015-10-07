@@ -4,8 +4,6 @@ build_script:
   - build.cmd --quiet --parallel verify
 clone_depth: 1
 test: off
-deploy: off
-
 deploy:
   provider: MyGet
   server: https://www.myget.org/F/codecomb/api/v2/package
