@@ -33,13 +33,17 @@ namespace CodeComb.AspNet.Localization.EntityFramework
         {
             var ret = new Dictionary<string, string>();
             foreach (var x in src)
-                ret.Add(x.Key, x.Value);
+                try
+                {
+                    ret.Add(x.Key, x.Value);
+                }
+                catch { }
             return ret;
         }
 
         public override void Refresh()
         {
-            _Collection.Clear();
+            _Collection = new List<CultureInfo>();
 
             var info = _DbContext.LocalizationCultureInfo
                 .Include(x => x._Cultures)
@@ -53,7 +57,8 @@ namespace CodeComb.AspNet.Localization.EntityFramework
                     Cultures = x._Cultures.Select(y => y.Culture).ToList(),
                     IsDefault = x.IsDefault,
                     Set = x.Set,
-                    LocalizedStrings = ConvertToDictionary(x._Strings)
+                    LocalizedStrings = ConvertToDictionary(x._Strings),
+                    Identifier = x.Id.ToString()
                 });
             }
         }
@@ -81,9 +86,44 @@ namespace CodeComb.AspNet.Localization.EntityFramework
             var str = _DbContext.LocalizationString
                 .Where(x => x.CultureInfoId.Equals(id) && x.Key == identifier)
                 .ToList();
-            foreach (var x in str)
+            if (str.Count > 0)
             {
-                x.Value = Content;
+                foreach (var x in str)
+                {
+                    x.Value = Content;
+                }
+            }
+            else
+            {
+                dynamic cultureId;
+                dynamic newId;
+                if (typeof(TKey) == typeof(Guid))
+                {
+                    cultureId = Guid.Parse(obj.Identifier);
+                    newId = Guid.NewGuid();
+                }
+                else if (typeof(TKey) == typeof(long))
+                {
+                    cultureId = Convert.ToInt64(obj.Identifier);
+                    newId = -1;
+                }
+                else if (typeof(TKey) == typeof(int))
+                {
+                    cultureId = Convert.ToInt32(obj.Identifier);
+                    newId = -1;
+                }
+                else
+                {
+                    cultureId = obj.Identifier.ToString();
+                    newId = Guid.NewGuid().ToString();
+                }
+                _DbContext.LocalizationString.Add(new LocalizedString<TKey>
+                {
+                    Id = newId,
+                    CultureInfoId = cultureId,
+                    Key = identifier,
+                    Value = Content
+                });
             }
             _DbContext.SaveChanges();
         }

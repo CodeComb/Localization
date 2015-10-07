@@ -43,7 +43,7 @@ namespace CodeComb.AspNet.Localization.Json
 
         public override void Refresh()
         {
-            _Collection.Clear();
+            _Collection = new List<CultureInfo>();
             var files = Directory.GetFiles(_ResourcesPath);
             foreach (var file in files)
             {

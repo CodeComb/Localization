@@ -18,7 +18,7 @@ namespace Microsoft.Extensions.DependencyInjection
             return self.AddSingleton<ILocalizationStringCollection>(x => new JsonCollection(resourcePath, x.GetRequiredService<IRequestCultureProvider>(), x.GetRequiredService<IApplicationEnvironment>()));
         }
 
-        public static IServiceCollection AddEFLocalization<TKey, TContext>(this IServiceCollection self)
+        public static IServiceCollection AddEFLocalization<TContext, TKey>(this IServiceCollection self)
             where TKey:IEquatable<TKey>
             where TContext : class, ILocalizationDbContext<TKey>
         {

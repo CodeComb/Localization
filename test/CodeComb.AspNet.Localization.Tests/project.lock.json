@@ -53,6 +53,24 @@
           "lib/dnx451/EntityFramework.Core.dll": {}
         }
       },
+      "EntityFramework.InMemory/7.0.0-rc1-15935": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework.Core": "7.0.0-rc1-15935"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.InMemory.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.InMemory.dll": {}
+        }
+      },
       "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15935": {
         "type": "package",
         "dependencies": {
@@ -1693,6 +1711,24 @@
         },
         "runtime": {
           "lib/dnx451/EntityFramework.Core.dll": {}
+        }
+      },
+      "EntityFramework.InMemory/7.0.0-rc1-15935": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework.Core": "7.0.0-rc1-15935"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.InMemory.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.InMemory.dll": {}
         }
       },
       "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15935": {
@@ -3337,6 +3373,24 @@
           "lib/dnx451/EntityFramework.Core.dll": {}
         }
       },
+      "EntityFramework.InMemory/7.0.0-rc1-15935": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework.Core": "7.0.0-rc1-15935"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.InMemory.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.InMemory.dll": {}
+        }
+      },
       "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15935": {
         "type": "package",
         "dependencies": {
@@ -4950,6 +5004,20 @@
         "lib/dotnet/EntityFramework.Core.xml",
         "lib/net45/EntityFramework.Core.dll",
         "lib/net45/EntityFramework.Core.xml"
+      ]
+    },
+    "EntityFramework.InMemory/7.0.0-rc1-15935": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "0kbIiN6GJS6KIKyBVxsdckNwbwHqnBcH6tOv+wFpeSV9nic6Ixvai0/SGmSzNdQszC8iTSjgGsQ85/2WRaV3cg==",
+      "files": [
+        "EntityFramework.InMemory.7.0.0-rc1-15935.nupkg",
+        "EntityFramework.InMemory.7.0.0-rc1-15935.nupkg.sha512",
+        "EntityFramework.InMemory.nuspec",
+        "lib/dotnet/EntityFramework.InMemory.dll",
+        "lib/dotnet/EntityFramework.InMemory.xml",
+        "lib/net45/EntityFramework.InMemory.dll",
+        "lib/net45/EntityFramework.InMemory.xml"
       ]
     },
     "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15935": {
@@ -6822,6 +6890,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "EntityFramework.InMemory >= 7.0.0-*",
       "Microsoft.AspNet.Testing >= 1.0.0-*",
       "xunit.runner.aspnet >= 2.0.0-aspnet-*",
       "Moq >= 4.2.1507.118",
