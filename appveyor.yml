@@ -5,3 +5,10 @@ build_script:
 clone_depth: 1
 test: off
 deploy: off
+
+deploy:
+  provider: MyGet
+  server: https://www.myget.org/F/codecomb/api/v2/package
+  api_key: 
+    secure: 4c734253-59d1-42ce-b664-ae292483fcf4
+  artifact: /.*\.nupkg/
