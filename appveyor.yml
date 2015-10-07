@@ -4,4 +4,3 @@ build_script:
   - build.cmd --quiet --parallel verify
 clone_depth: 1
 test: off
-deploy: off
