@@ -11,8 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{FEBE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4AEB5045-CFB2-42F2-B00C-5926381A773D}"
 	ProjectSection(SolutionItems) = preProject
+		.travis.yml = .travis.yml
+		appveyor.yml = appveyor.yml
+		build.cmd = build.cmd
+		build.sh = build.sh
 		global.json = global.json
+		LICENSE = LICENSE
+		makefile.shade = makefile.shade
 		Nuget.config = Nuget.config
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CodeComb.AspNet.Localization", "src\CodeComb.AspNet.Localization\CodeComb.AspNet.Localization.xproj", "{9A312F08-E952-4FEA-9CEB-D490F0EB76B9}"
