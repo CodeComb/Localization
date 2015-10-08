@@ -16,6 +16,6 @@
     "Microsoft.AspNet.Testing": "1.0.0-*",
     "xunit.runner.aspnet": "2.0.0-aspnet-*",
     "Moq": "4.2.1507.118",
-    "CodeComb.AspNet.Localization": "1.0.0-*"
+    "CodeComb.AspNet.Localization": "2.0.0-*"
   }
 }
