@@ -44,7 +44,7 @@ namespace CodeComb.AspNet.Localization.EntityFramework
             _Collection = new List<CultureInfo>();
 
             var info = _DbContext.LocalizationCultureInfo
-                .Include(x => x._Cultures)
+                .Include(x => x._Culture)
                 .Include(x => x._Strings)
                 .ToList();
 
@@ -52,7 +52,7 @@ namespace CodeComb.AspNet.Localization.EntityFramework
             {
                 _Collection.Add(new CultureInfo
                 {
-                    Cultures = x._Cultures.Select(y => y.Culture).ToList(),
+                    Culture = x._Culture.Select(y => y.CultureString).ToList(),
                     IsDefault = x.IsDefault,
                     Set = x.Set,
                     LocalizedStrings = ConvertToDictionary(x._Strings),
@@ -86,7 +86,7 @@ namespace CodeComb.AspNet.Localization.EntityFramework
 
         public override void SetString(string culture, string identifier, string Content)
         {
-            var obj = _Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
+            var obj = _Collection.Where(x => x.Culture.Contains(culture)).FirstOrDefault();
             if (obj == null)
                 throw new KeyNotFoundException();
             obj.LocalizedStrings[identifier] = Content;

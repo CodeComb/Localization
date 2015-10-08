@@ -16,7 +16,7 @@ namespace Microsoft.AspNet.Builder
         {
             var SR = self.ApplicationServices.GetService<ILocalizationStringCollection>();
             var CultureProvider = self.ApplicationServices.GetService<IRequestCultureProvider>();
-            var culture = SR.Collection.Where(x => x.Cultures.Contains(SR.SingleCulture(CultureProvider.DetermineRequestCulture()))).First();
+            var culture = SR.Collection.Where(x => x.Culture.Contains(SR.SingleCulture(CultureProvider.DetermineRequestCulture()))).First();
             var json = JsonConvert.SerializeObject(culture.LocalizedStrings);
             return self.Map(scriptUrl, config => 
             {

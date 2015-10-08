@@ -35,22 +35,22 @@ namespace CodeComb.AspNet.Localization
 
         public abstract void RemoveString(string Identifier);
 
-        public virtual string SingleCulture(string[] cultures)
+        public virtual string SingleCulture(string[] culture)
         {
-            foreach(var x in cultures)
+            foreach(var x in culture)
             {
-                if (Collection.Any(y => y.Cultures.Contains(x)))
+                if (Collection.Any(y => y.Culture.Contains(x)))
                 {
-                    var result = Collection.Where(y => y.Cultures.Contains(x)).First().Cultures.First();
+                    var result = Collection.Where(y => y.Culture.Contains(x)).First().Culture.First();
                     return result;
                 }
             }
-            return Collection.Where(y => y.IsDefault).First().Cultures.First();
+            return Collection.Where(y => y.IsDefault).First().Culture.First();
         }
 
         public virtual string GetString(string culture, string identifier, params object[] objects)
         {
-            var cultureInfo = Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
+            var cultureInfo = Collection.Where(x => x.Culture.Contains(culture)).FirstOrDefault();
             if (cultureInfo == null)
                 cultureInfo = Collection.Where(x => x.IsDefault).FirstOrDefault();
             if (cultureInfo == null)
@@ -68,7 +68,7 @@ namespace CodeComb.AspNet.Localization
 
         public virtual void SetString(string culture, string identifier, string Content)
         {
-            var obj = Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
+            var obj = Collection.Where(x => x.Culture.Contains(culture)).FirstOrDefault();
             if (obj == null)
                 throw new FileNotFoundException();
             obj.LocalizedStrings[identifier] = Content;

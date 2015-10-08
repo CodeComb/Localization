@@ -17,7 +17,7 @@ namespace CodeComb.AspNet.Localization
         [MaxLength(128)]
         public string Set { get; set; }
 
-        public virtual List<string> Cultures { get; set; }
+        public virtual List<string> Culture { get; set; }
 
         public bool IsDefault { get; set; }
 
