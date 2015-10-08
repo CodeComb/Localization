@@ -4,13 +4,4 @@ build_script:
   - build.cmd --quiet --parallel verify
 clone_depth: 1
 test: off
-artifacts:
-  - path: Publish\release\*.nupkg
-    name: nupkgfiles
-deploy:
-  provider: NuGet
-  server: https://www.myget.org/F/codecomb/
-  api_key:
-    secure: U0JzTNFZzkK2ZK4pJIP89A==
-  skip_symbols: true
-  artifact: nupkgfiles
+deploy: off
