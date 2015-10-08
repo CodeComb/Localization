@@ -17,7 +17,7 @@ namespace CodeComb.AspNet.Localization.Json
 
         public override void SetString(string culture, string identifier, string Content)
         {
-            var obj = _Collection.Where(x => x.Cultures.Contains(culture)).FirstOrDefault();
+            var obj = _Collection.Where(x => x.Culture.Contains(culture)).FirstOrDefault();
             if (obj == null)
                 throw new FileNotFoundException();
             obj.LocalizedStrings[identifier] = Content;

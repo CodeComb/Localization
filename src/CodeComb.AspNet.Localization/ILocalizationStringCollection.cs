@@ -13,6 +13,6 @@ namespace CodeComb.AspNet.Localization
         void SetString(string culture, string identifier, string Content);
         void Refresh();
         void RemoveString(string Identifier);
-        string SingleCulture(string[] cultures);
+        string SingleCulture(string[] culture);
     }
 }

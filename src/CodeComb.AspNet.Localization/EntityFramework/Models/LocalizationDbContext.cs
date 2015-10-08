@@ -14,7 +14,7 @@ namespace CodeComb.AspNet.Localization.EntityFramework
         where TKey : IEquatable<TKey>
     {
         public DbSet<CultureInfo<TKey>> LocalizationCultureInfo { get; set; }
-        public DbSet<Cultures<TKey>> LocalizationCulture { get; set; }
+        public DbSet<Culture<TKey>> LocalizationCulture { get; set; }
         public DbSet<LocalizedString<TKey>> LocalizationString { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

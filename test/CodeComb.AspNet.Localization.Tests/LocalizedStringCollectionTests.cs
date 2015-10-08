@@ -18,7 +18,7 @@ namespace CodeComb.AspNet.Localization.Tests
             {
                 new CultureInfo {
                     Set = "zh-CN",
-                    Cultures = new List<string> { "zh", "zh-CN", "zh-Hans" },
+                    Culture = new List<string> { "zh", "zh-CN", "zh-Hans" },
                     IsDefault = true,
                     LocalizedStrings = new Dictionary<string, string>
                     {
@@ -48,7 +48,7 @@ namespace CodeComb.AspNet.Localization.Tests
             {
                 new CultureInfo {
                     Set = "zh-CN",
-                    Cultures = new List<string> { "zh", "zh-CN", "zh-Hans" },
+                    Culture = new List<string> { "zh", "zh-CN", "zh-Hans" },
                     IsDefault = true,
                     LocalizedStrings = new Dictionary<string, string>
                     {
@@ -75,7 +75,7 @@ namespace CodeComb.AspNet.Localization.Tests
             {
                 new CultureInfo {
                     Set = "zh-CN",
-                    Cultures = new List<string> { "zh", "zh-CN", "zh-Hans" },
+                    Culture = new List<string> { "zh", "zh-CN", "zh-Hans" },
                     IsDefault = true,
                     LocalizedStrings = new Dictionary<string, string>
                     {

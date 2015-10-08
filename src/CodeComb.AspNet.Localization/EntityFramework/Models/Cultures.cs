@@ -7,8 +7,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CodeComb.AspNet.Localization.EntityFramework
 {
-    [Table("AspNetLocalizationCultures")]
-    public class Cultures<TKey>
+    [Table("AspNetLocalizationCulture")]
+    public class Culture<TKey>
         where TKey : IEquatable<TKey>
     {
         public TKey Id { get; set; }
@@ -19,6 +19,6 @@ namespace CodeComb.AspNet.Localization.EntityFramework
         public virtual CultureInfo<TKey> CultureInfo { get; set; }
 
         [MaxLength(32)]
-        public string Culture { get; set; }
+        public string CultureString { get; set; }
     }
 }

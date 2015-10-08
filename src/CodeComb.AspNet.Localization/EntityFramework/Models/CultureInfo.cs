@@ -12,7 +12,7 @@ namespace CodeComb.AspNet.Localization.EntityFramework
     {
         public TKey Id { get; set; }
 
-        public virtual ICollection<Cultures<TKey>> _Cultures { get; set; } = new List<Cultures<TKey>>();
+        public virtual ICollection<Culture<TKey>> _Culture { get; set; } = new List<Culture<TKey>>();
 
         public virtual ICollection<LocalizedString<TKey>> _Strings { get; set; } = new List<LocalizedString<TKey>>();
     }

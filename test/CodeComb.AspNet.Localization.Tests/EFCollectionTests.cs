@@ -30,9 +30,9 @@ namespace CodeComb.AspNet.Localization.Tests
                     Set = "zh-CN"
                 };
                 db.LocalizationCultureInfo.Add(info_1);
-                db.LocalizationCulture.Add(new Cultures<Guid> { Culture = "zh", CultureInfoId = info_1.Id });
-                db.LocalizationCulture.Add(new Cultures<Guid> { Culture = "zh-CN", CultureInfoId = info_1.Id });
-                db.LocalizationCulture.Add(new Cultures<Guid> { Culture = "zh-Hans", CultureInfoId = info_1.Id });
+                db.LocalizationCulture.Add(new Culture<Guid> { CultureString = "zh", CultureInfoId = info_1.Id });
+                db.LocalizationCulture.Add(new Culture<Guid> { CultureString = "zh-CN", CultureInfoId = info_1.Id });
+                db.LocalizationCulture.Add(new Culture<Guid> { CultureString = "zh-Hans", CultureInfoId = info_1.Id });
                 db.LocalizationString.Add(new LocalizedString<Guid> { CultureInfoId = info_1.Id, Key = "Hello world.", Value = "你好，世界。" });
                 db.LocalizationString.Add(new LocalizedString<Guid> { CultureInfoId = info_1.Id, Key = "Code Comb Co., Ltd.", Value = "哈尔滨市码锋科技有限责任公司" });
                 db.LocalizationString.Add(new LocalizedString<Guid> { CultureInfoId = info_1.Id, Key = "My name is {0}.", Value = "我的名字是{0}" });
@@ -43,8 +43,8 @@ namespace CodeComb.AspNet.Localization.Tests
                     Set = "en-US"
                 };
                 db.LocalizationCultureInfo.Add(info_2);
-                db.LocalizationCulture.Add(new Cultures<Guid> { Culture = "en", CultureInfoId = info_2.Id });
-                db.LocalizationCulture.Add(new Cultures<Guid> { Culture = "en-US", CultureInfoId = info_2.Id });
+                db.LocalizationCulture.Add(new Culture<Guid> { CultureString = "en", CultureInfoId = info_2.Id });
+                db.LocalizationCulture.Add(new Culture<Guid> { CultureString = "en-US", CultureInfoId = info_2.Id });
                 db.LocalizationString.Add(new LocalizedString<Guid> { CultureInfoId = info_2.Id, Key = "Hello world.", Value = "Hello world." });
                 db.LocalizationString.Add(new LocalizedString<Guid> { CultureInfoId = info_2.Id, Key = "Code Comb Co., Ltd.", Value = "Code Comb Co., Ltd." });
                 db.LocalizationString.Add(new LocalizedString<Guid> { CultureInfoId = info_2.Id, Key = "My name is {0}.", Value = "My name is {0}." });
@@ -55,7 +55,7 @@ namespace CodeComb.AspNet.Localization.Tests
                     Set = "writing-test"
                 };
                 db.LocalizationCultureInfo.Add(info_3);
-                db.LocalizationCulture.Add(new Cultures<Guid> { Culture = "writing-test", CultureInfoId = info_3.Id });
+                db.LocalizationCulture.Add(new Culture<Guid> { CultureString = "writing-test", CultureInfoId = info_3.Id });
                 db.LocalizationString.Add(new LocalizedString<Guid> { CultureInfoId = info_3.Id, Key = "Hello world.", Value = "你好，世界。" });
                 db.LocalizationString.Add(new LocalizedString<Guid> { CultureInfoId = info_3.Id, Key = "Code Comb Co., Ltd.", Value = "哈尔滨市码锋科技有限责任公司" });
                 db.LocalizationString.Add(new LocalizedString<Guid> { CultureInfoId = info_3.Id, Key = "My name is {0}.", Value = "我的名字是{0}" });
