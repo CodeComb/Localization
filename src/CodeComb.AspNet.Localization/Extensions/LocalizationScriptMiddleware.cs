@@ -12,7 +12,7 @@ namespace Microsoft.AspNet.Builder
 {
     public static class LocalizationScriptMiddleware
     {
-        public static IApplicationBuilder UseCodeCombLocalization(this IApplicationBuilder self, string scriptUrl = "/scripts/localization.js")
+        public static IApplicationBuilder UseJavascriptLocalization(this IApplicationBuilder self, string scriptUrl = "/scripts/localization.js")
         {
             var SR = self.ApplicationServices.GetService<ILocalizationStringCollection>();
             var CultureProvider = self.ApplicationServices.GetService<IRequestCultureProvider>();
@@ -25,15 +25,12 @@ namespace Microsoft.AspNet.Builder
                 {
                     js.AppendLine("__dictionary = " + json + ";");
                     js.AppendLine(@"
-var __ = {};
-__.c = __c;
-
 function __replaceAll(str0, str1, str2)
 {
 	return str0.replace(new RegExp(str1, 'gm'), str2);
 }
 
-function __c(key, params)
+function SR(key, params)
 {
 	if (!params)
 		return __dictionary[key] || key;
