@@ -19,7 +19,7 @@ namespace CodeComb.AspNet.Localization.Tests
             // Arrange
             var req = new Mock<HttpRequest>();
             req.Setup(x => x.Headers)
-                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", "zh" } }));
+                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", new string[] { "zh,zh-CN;q=0.8,en;q=0.8" } } }));
             req.Setup(x => x.Cookies)
                 .Returns(new RequestCookiesCollection());
             var httpContext = new Mock<HttpContext>();
@@ -34,7 +34,7 @@ namespace CodeComb.AspNet.Localization.Tests
             var actual = cookieProvider.DetermineRequestCulture();
 
             // Assert
-            Assert.Equal(new string[] { "zh" }, actual);
+            Assert.Equal(new string[] { "zh", "zh-CN", "en" }, actual);
         }
 
         [Fact]
@@ -43,7 +43,7 @@ namespace CodeComb.AspNet.Localization.Tests
             // Arrange
             var req = new Mock<HttpRequest>();
             req.Setup(x => x.Headers)
-                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", "en" } }));
+                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", new string[] { "en" } } }));
             req.Setup(x => x.Cookies)
                 .Returns(new ReadableStringCollection(new Dictionary<string, StringValues> { { "ASPNET_LANG", "zh" } }));
             var httpContext = new Mock<HttpContext>();

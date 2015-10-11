@@ -3,7 +3,7 @@
   "version": 2,
   "targets": {
     "DNX,Version=v4.5.1": {
-      "CodeComb.AspNet.Localization/1.0.0-t151008013652": {
+      "CodeComb.AspNet.Localization/2.0.0": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -11,7 +11,7 @@
           "Microsoft.AspNet.Mvc": "6.0.0"
         }
       },
-      "EntityFramework.Core/7.0.0-rc1-15948": {
+      "EntityFramework.Core/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
           "Ix-Async": "1.2.5",
@@ -53,10 +53,10 @@
           "lib/dnx451/EntityFramework.Core.dll": {}
         }
       },
-      "EntityFramework.InMemory/7.0.0-rc1-15948": {
+      "EntityFramework.InMemory/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.Core": "7.0.0-rc1-15948"
+          "EntityFramework.Core": "7.0.0-rc1-15950"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -71,10 +71,10 @@
           "lib/net45/EntityFramework.InMemory.dll": {}
         }
       },
-      "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15948": {
+      "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.Relational": "7.0.0-rc1-15948"
+          "EntityFramework.Relational": "7.0.0-rc1-15950"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -89,10 +89,10 @@
           "lib/net45/EntityFramework.MicrosoftSqlServer.dll": {}
         }
       },
-      "EntityFramework.Relational/7.0.0-rc1-15948": {
+      "EntityFramework.Relational/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.Core": "7.0.0-rc1-15948",
+          "EntityFramework.Core": "7.0.0-rc1-15950",
           "System.Diagnostics.Tracing.Telemetry": "4.0.0-beta-23405"
         },
         "frameworkAssemblies": [
@@ -307,7 +307,7 @@
           "lib/dnx451/Microsoft.AspNet.DataProtection.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.Diagnostics.Abstractions/1.0.0-rc1-15852": {
+      "Microsoft.AspNet.Diagnostics.Abstractions/1.0.0-rc1-15854": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -472,7 +472,7 @@
           "lib/dnx451/Microsoft.AspNet.Http.Features.dll": {}
         }
       },
-      "Microsoft.AspNet.Identity/3.0.0-rc1-15868": {
+      "Microsoft.AspNet.Identity/3.0.0-rc1-15870": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc1-15763",
@@ -492,11 +492,11 @@
           "lib/dnx451/Microsoft.AspNet.Identity.dll": {}
         }
       },
-      "Microsoft.AspNet.Identity.EntityFramework/3.0.0-rc1-15868": {
+      "Microsoft.AspNet.Identity.EntityFramework/3.0.0-rc1-15870": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-15948",
-          "Microsoft.AspNet.Identity": "3.0.0-rc1-15868"
+          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-15950",
+          "Microsoft.AspNet.Identity": "3.0.0-rc1-15870"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -550,16 +550,16 @@
           "lib/dnx451/Microsoft.AspNet.Localization.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.ApiExplorer": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Cors": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Localization": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.ApiExplorer": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Cors": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Localization": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16034",
           "Microsoft.Extensions.Caching.Memory": "1.0.0-rc1-15690",
           "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-15674"
         },
@@ -576,7 +576,7 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Abstractions/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Abstractions/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Routing": "1.0.0-rc1-15732"
@@ -594,10 +594,10 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.ApiExplorer/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.ApiExplorer/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032"
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -612,13 +612,13 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.ApiExplorer.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Core/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Core/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Authorization": "1.0.0-rc1-15763",
           "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-15682",
           "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-15746",
-          "Microsoft.AspNet.Mvc.Abstractions": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Abstractions": "6.0.0-rc1-16034",
           "Microsoft.Dnx.Runtime.Abstractions": "1.0.0-rc1-15844",
           "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-15675",
           "Microsoft.Extensions.MemoryPool": "1.0.0-rc1-15720",
@@ -638,11 +638,11 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Core.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Cors/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Cors/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Cors.Core": "6.0.0-rc1-15728",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032"
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -657,10 +657,10 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Cors.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.DataAnnotations/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.DataAnnotations/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034",
           "Microsoft.Extensions.Localization": "1.0.0-rc1-15735"
         },
         "frameworkAssemblies": [
@@ -677,11 +677,11 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.DataAnnotations.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Formatters.Json/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Formatters.Json/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.JsonPatch": "1.0.0-rc1-15923",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034",
           "Newtonsoft.Json": "6.0.6"
         },
         "frameworkAssemblies": [
@@ -697,11 +697,11 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Formatters.Json.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Localization/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Localization/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Localization": "1.0.0-rc1-15735",
-          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16034",
           "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-15674",
           "Microsoft.Extensions.Localization": "1.0.0-rc1-15735"
         },
@@ -718,12 +718,12 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Localization.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Razor/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Razor/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.Razor.Host": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces": "1.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Razor.Host": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces": "1.0.0-rc1-16034",
           "Microsoft.AspNet.Razor.Runtime.Precompilation": "4.0.0-rc1-15748",
           "Microsoft.Dnx.Compilation.CSharp.Abstractions": "1.0.0-rc1-15844",
           "Microsoft.Dnx.Compilation.CSharp.Common": "1.0.0-rc1-15844"
@@ -746,7 +746,7 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Razor.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Razor.Host/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Razor.Host/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.FileProviders.Physical": "1.0.0-rc1-15682",
@@ -767,15 +767,15 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Razor.Host.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.ViewFeatures/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.ViewFeatures/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Antiforgery": "1.0.0-rc1-15723",
-          "Microsoft.AspNet.Diagnostics.Abstractions": "1.0.0-rc1-15852",
+          "Microsoft.AspNet.Diagnostics.Abstractions": "1.0.0-rc1-15854",
           "Microsoft.AspNet.Html.Abstractions": "1.0.0-rc1-15798",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16032"
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16034"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -790,7 +790,7 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.ViewFeatures.dll": {}
         }
       },
-      "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces/1.0.0-rc1-16032": {
+      "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces/1.0.0-rc1-16034": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -1663,7 +1663,7 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x86": {
-      "CodeComb.AspNet.Localization/1.0.0-t151008013652": {
+      "CodeComb.AspNet.Localization/2.0.0": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -1671,7 +1671,7 @@
           "Microsoft.AspNet.Mvc": "6.0.0"
         }
       },
-      "EntityFramework.Core/7.0.0-rc1-15948": {
+      "EntityFramework.Core/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
           "Ix-Async": "1.2.5",
@@ -1713,10 +1713,10 @@
           "lib/dnx451/EntityFramework.Core.dll": {}
         }
       },
-      "EntityFramework.InMemory/7.0.0-rc1-15948": {
+      "EntityFramework.InMemory/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.Core": "7.0.0-rc1-15948"
+          "EntityFramework.Core": "7.0.0-rc1-15950"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -1731,10 +1731,10 @@
           "lib/net45/EntityFramework.InMemory.dll": {}
         }
       },
-      "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15948": {
+      "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.Relational": "7.0.0-rc1-15948"
+          "EntityFramework.Relational": "7.0.0-rc1-15950"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -1749,10 +1749,10 @@
           "lib/net45/EntityFramework.MicrosoftSqlServer.dll": {}
         }
       },
-      "EntityFramework.Relational/7.0.0-rc1-15948": {
+      "EntityFramework.Relational/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.Core": "7.0.0-rc1-15948",
+          "EntityFramework.Core": "7.0.0-rc1-15950",
           "System.Diagnostics.Tracing.Telemetry": "4.0.0-beta-23405"
         },
         "frameworkAssemblies": [
@@ -1967,7 +1967,7 @@
           "lib/dnx451/Microsoft.AspNet.DataProtection.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.Diagnostics.Abstractions/1.0.0-rc1-15852": {
+      "Microsoft.AspNet.Diagnostics.Abstractions/1.0.0-rc1-15854": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -2132,7 +2132,7 @@
           "lib/dnx451/Microsoft.AspNet.Http.Features.dll": {}
         }
       },
-      "Microsoft.AspNet.Identity/3.0.0-rc1-15868": {
+      "Microsoft.AspNet.Identity/3.0.0-rc1-15870": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc1-15763",
@@ -2152,11 +2152,11 @@
           "lib/dnx451/Microsoft.AspNet.Identity.dll": {}
         }
       },
-      "Microsoft.AspNet.Identity.EntityFramework/3.0.0-rc1-15868": {
+      "Microsoft.AspNet.Identity.EntityFramework/3.0.0-rc1-15870": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-15948",
-          "Microsoft.AspNet.Identity": "3.0.0-rc1-15868"
+          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-15950",
+          "Microsoft.AspNet.Identity": "3.0.0-rc1-15870"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -2210,16 +2210,16 @@
           "lib/dnx451/Microsoft.AspNet.Localization.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.ApiExplorer": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Cors": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Localization": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.ApiExplorer": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Cors": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Localization": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16034",
           "Microsoft.Extensions.Caching.Memory": "1.0.0-rc1-15690",
           "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-15674"
         },
@@ -2236,7 +2236,7 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Abstractions/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Abstractions/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Routing": "1.0.0-rc1-15732"
@@ -2254,10 +2254,10 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.ApiExplorer/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.ApiExplorer/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032"
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -2272,13 +2272,13 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.ApiExplorer.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Core/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Core/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Authorization": "1.0.0-rc1-15763",
           "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-15682",
           "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-15746",
-          "Microsoft.AspNet.Mvc.Abstractions": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Abstractions": "6.0.0-rc1-16034",
           "Microsoft.Dnx.Runtime.Abstractions": "1.0.0-rc1-15844",
           "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-15675",
           "Microsoft.Extensions.MemoryPool": "1.0.0-rc1-15720",
@@ -2298,11 +2298,11 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Core.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Cors/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Cors/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Cors.Core": "6.0.0-rc1-15728",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032"
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -2317,10 +2317,10 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Cors.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.DataAnnotations/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.DataAnnotations/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034",
           "Microsoft.Extensions.Localization": "1.0.0-rc1-15735"
         },
         "frameworkAssemblies": [
@@ -2337,11 +2337,11 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.DataAnnotations.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Formatters.Json/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Formatters.Json/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.JsonPatch": "1.0.0-rc1-15923",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034",
           "Newtonsoft.Json": "6.0.6"
         },
         "frameworkAssemblies": [
@@ -2357,11 +2357,11 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Formatters.Json.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Localization/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Localization/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Localization": "1.0.0-rc1-15735",
-          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16034",
           "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-15674",
           "Microsoft.Extensions.Localization": "1.0.0-rc1-15735"
         },
@@ -2378,12 +2378,12 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Localization.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Razor/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Razor/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.Razor.Host": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces": "1.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Razor.Host": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces": "1.0.0-rc1-16034",
           "Microsoft.AspNet.Razor.Runtime.Precompilation": "4.0.0-rc1-15748",
           "Microsoft.Dnx.Compilation.CSharp.Abstractions": "1.0.0-rc1-15844",
           "Microsoft.Dnx.Compilation.CSharp.Common": "1.0.0-rc1-15844"
@@ -2406,7 +2406,7 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Razor.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Razor.Host/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Razor.Host/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.FileProviders.Physical": "1.0.0-rc1-15682",
@@ -2427,15 +2427,15 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Razor.Host.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.ViewFeatures/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.ViewFeatures/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Antiforgery": "1.0.0-rc1-15723",
-          "Microsoft.AspNet.Diagnostics.Abstractions": "1.0.0-rc1-15852",
+          "Microsoft.AspNet.Diagnostics.Abstractions": "1.0.0-rc1-15854",
           "Microsoft.AspNet.Html.Abstractions": "1.0.0-rc1-15798",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16032"
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16034"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -2450,7 +2450,7 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.ViewFeatures.dll": {}
         }
       },
-      "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces/1.0.0-rc1-16032": {
+      "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces/1.0.0-rc1-16034": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -3323,7 +3323,7 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x64": {
-      "CodeComb.AspNet.Localization/1.0.0-t151008013652": {
+      "CodeComb.AspNet.Localization/2.0.0": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -3331,7 +3331,7 @@
           "Microsoft.AspNet.Mvc": "6.0.0"
         }
       },
-      "EntityFramework.Core/7.0.0-rc1-15948": {
+      "EntityFramework.Core/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
           "Ix-Async": "1.2.5",
@@ -3373,10 +3373,10 @@
           "lib/dnx451/EntityFramework.Core.dll": {}
         }
       },
-      "EntityFramework.InMemory/7.0.0-rc1-15948": {
+      "EntityFramework.InMemory/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.Core": "7.0.0-rc1-15948"
+          "EntityFramework.Core": "7.0.0-rc1-15950"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -3391,10 +3391,10 @@
           "lib/net45/EntityFramework.InMemory.dll": {}
         }
       },
-      "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15948": {
+      "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.Relational": "7.0.0-rc1-15948"
+          "EntityFramework.Relational": "7.0.0-rc1-15950"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -3409,10 +3409,10 @@
           "lib/net45/EntityFramework.MicrosoftSqlServer.dll": {}
         }
       },
-      "EntityFramework.Relational/7.0.0-rc1-15948": {
+      "EntityFramework.Relational/7.0.0-rc1-15950": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.Core": "7.0.0-rc1-15948",
+          "EntityFramework.Core": "7.0.0-rc1-15950",
           "System.Diagnostics.Tracing.Telemetry": "4.0.0-beta-23405"
         },
         "frameworkAssemblies": [
@@ -3627,7 +3627,7 @@
           "lib/dnx451/Microsoft.AspNet.DataProtection.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.Diagnostics.Abstractions/1.0.0-rc1-15852": {
+      "Microsoft.AspNet.Diagnostics.Abstractions/1.0.0-rc1-15854": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -3792,7 +3792,7 @@
           "lib/dnx451/Microsoft.AspNet.Http.Features.dll": {}
         }
       },
-      "Microsoft.AspNet.Identity/3.0.0-rc1-15868": {
+      "Microsoft.AspNet.Identity/3.0.0-rc1-15870": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc1-15763",
@@ -3812,11 +3812,11 @@
           "lib/dnx451/Microsoft.AspNet.Identity.dll": {}
         }
       },
-      "Microsoft.AspNet.Identity.EntityFramework/3.0.0-rc1-15868": {
+      "Microsoft.AspNet.Identity.EntityFramework/3.0.0-rc1-15870": {
         "type": "package",
         "dependencies": {
-          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-15948",
-          "Microsoft.AspNet.Identity": "3.0.0-rc1-15868"
+          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-15950",
+          "Microsoft.AspNet.Identity": "3.0.0-rc1-15870"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -3870,16 +3870,16 @@
           "lib/dnx451/Microsoft.AspNet.Localization.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.ApiExplorer": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Cors": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Localization": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.ApiExplorer": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Cors": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Localization": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16034",
           "Microsoft.Extensions.Caching.Memory": "1.0.0-rc1-15690",
           "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-15674"
         },
@@ -3896,7 +3896,7 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Abstractions/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Abstractions/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Routing": "1.0.0-rc1-15732"
@@ -3914,10 +3914,10 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.ApiExplorer/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.ApiExplorer/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032"
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -3932,13 +3932,13 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.ApiExplorer.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Core/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Core/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Authorization": "1.0.0-rc1-15763",
           "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-15682",
           "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-15746",
-          "Microsoft.AspNet.Mvc.Abstractions": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Abstractions": "6.0.0-rc1-16034",
           "Microsoft.Dnx.Runtime.Abstractions": "1.0.0-rc1-15844",
           "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-15675",
           "Microsoft.Extensions.MemoryPool": "1.0.0-rc1-15720",
@@ -3958,11 +3958,11 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Core.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Cors/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Cors/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Cors.Core": "6.0.0-rc1-15728",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032"
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -3977,10 +3977,10 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Cors.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.DataAnnotations/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.DataAnnotations/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034",
           "Microsoft.Extensions.Localization": "1.0.0-rc1-15735"
         },
         "frameworkAssemblies": [
@@ -3997,11 +3997,11 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.DataAnnotations.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Formatters.Json/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Formatters.Json/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.JsonPatch": "1.0.0-rc1-15923",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034",
           "Newtonsoft.Json": "6.0.6"
         },
         "frameworkAssemblies": [
@@ -4017,11 +4017,11 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Formatters.Json.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Localization/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Localization/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Localization": "1.0.0-rc1-15735",
-          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Razor": "6.0.0-rc1-16034",
           "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-15674",
           "Microsoft.Extensions.Localization": "1.0.0-rc1-15735"
         },
@@ -4038,12 +4038,12 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Localization.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Razor/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Razor/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Mvc.Razor.Host": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces": "1.0.0-rc1-16032",
+          "Microsoft.AspNet.Mvc.Razor.Host": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces": "1.0.0-rc1-16034",
           "Microsoft.AspNet.Razor.Runtime.Precompilation": "4.0.0-rc1-15748",
           "Microsoft.Dnx.Compilation.CSharp.Abstractions": "1.0.0-rc1-15844",
           "Microsoft.Dnx.Compilation.CSharp.Common": "1.0.0-rc1-15844"
@@ -4066,7 +4066,7 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Razor.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.Razor.Host/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.Razor.Host/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.FileProviders.Physical": "1.0.0-rc1-15682",
@@ -4087,15 +4087,15 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.Razor.Host.dll": {}
         }
       },
-      "Microsoft.AspNet.Mvc.ViewFeatures/6.0.0-rc1-16032": {
+      "Microsoft.AspNet.Mvc.ViewFeatures/6.0.0-rc1-16034": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Antiforgery": "1.0.0-rc1-15723",
-          "Microsoft.AspNet.Diagnostics.Abstractions": "1.0.0-rc1-15852",
+          "Microsoft.AspNet.Diagnostics.Abstractions": "1.0.0-rc1-15854",
           "Microsoft.AspNet.Html.Abstractions": "1.0.0-rc1-15798",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16032",
-          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16032"
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.DataAnnotations": "6.0.0-rc1-16034",
+          "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-16034"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -4110,7 +4110,7 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.ViewFeatures.dll": {}
         }
       },
-      "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces/1.0.0-rc1-16032": {
+      "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces/1.0.0-rc1-16034": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -4984,17 +4984,17 @@
     }
   },
   "libraries": {
-    "CodeComb.AspNet.Localization/1.0.0-t151008013652": {
+    "CodeComb.AspNet.Localization/2.0.0": {
       "type": "project",
       "path": "../../src/CodeComb.AspNet.Localization/project.json"
     },
-    "EntityFramework.Core/7.0.0-rc1-15948": {
+    "EntityFramework.Core/7.0.0-rc1-15950": {
       "type": "package",
       "serviceable": true,
-      "sha512": "bRVEpzFvD2xnC2vfi6h8nSgWaDLimZ/M7fwPBgRtoe2/9+EvIPB4snS9TBScz5mXTUXhVToPTW04IOdwVONlew==",
+      "sha512": "y+ny0MKNFCHw2zMxtqPcLqdpSnzvpjHICDPEtvvwSPPIi0Mr34JX1viHKKS9wWxDx8x6qQxjcBMP7IfsCs2yjw==",
       "files": [
-        "EntityFramework.Core.7.0.0-rc1-15948.nupkg",
-        "EntityFramework.Core.7.0.0-rc1-15948.nupkg.sha512",
+        "EntityFramework.Core.7.0.0-rc1-15950.nupkg",
+        "EntityFramework.Core.7.0.0-rc1-15950.nupkg.sha512",
         "EntityFramework.Core.nuspec",
         "lib/dnx451/EntityFramework.Core.dll",
         "lib/dnx451/EntityFramework.Core.xml",
@@ -5006,13 +5006,13 @@
         "lib/net45/EntityFramework.Core.xml"
       ]
     },
-    "EntityFramework.InMemory/7.0.0-rc1-15948": {
+    "EntityFramework.InMemory/7.0.0-rc1-15950": {
       "type": "package",
       "serviceable": true,
-      "sha512": "jMt4phVZvUofg7qxHW9r6IhXfDlLSepk6Agy2pvehVbvz2CNvR5yNg6yon3dULg3/IlNMAz+VniZbpQae3ch0w==",
+      "sha512": "xoO7cWAeE0sTDjGs3vZZ/1EHpZC/sBKPm46DfGGddFQ5n4RbazpMWse0SXt1nbUqdhbARC2Hva1bU4trOikaDQ==",
       "files": [
-        "EntityFramework.InMemory.7.0.0-rc1-15948.nupkg",
-        "EntityFramework.InMemory.7.0.0-rc1-15948.nupkg.sha512",
+        "EntityFramework.InMemory.7.0.0-rc1-15950.nupkg",
+        "EntityFramework.InMemory.7.0.0-rc1-15950.nupkg.sha512",
         "EntityFramework.InMemory.nuspec",
         "lib/dotnet/EntityFramework.InMemory.dll",
         "lib/dotnet/EntityFramework.InMemory.xml",
@@ -5020,13 +5020,13 @@
         "lib/net45/EntityFramework.InMemory.xml"
       ]
     },
-    "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15948": {
+    "EntityFramework.MicrosoftSqlServer/7.0.0-rc1-15950": {
       "type": "package",
       "serviceable": true,
-      "sha512": "U+OjY1y6HXOdetexUpwMZaBngOeI5rUlamA9T1TTnTGtVpQOeT6FHXYgy8saeXyrQUc657j86TWEhbOIUapYMg==",
+      "sha512": "LUqGQSmsCvx40Odl/m50fa1nhZQZsH3cgaf38W4foPeRq61XECU9ZzffPLhhsz4yBY9yKBKJZ0IZ2rxXZ3tw1A==",
       "files": [
-        "EntityFramework.MicrosoftSqlServer.7.0.0-rc1-15948.nupkg",
-        "EntityFramework.MicrosoftSqlServer.7.0.0-rc1-15948.nupkg.sha512",
+        "EntityFramework.MicrosoftSqlServer.7.0.0-rc1-15950.nupkg",
+        "EntityFramework.MicrosoftSqlServer.7.0.0-rc1-15950.nupkg.sha512",
         "EntityFramework.MicrosoftSqlServer.nuspec",
         "lib/dnxcore50/EntityFramework.MicrosoftSqlServer.dll",
         "lib/dnxcore50/EntityFramework.MicrosoftSqlServer.xml",
@@ -5036,13 +5036,13 @@
         "lib/net45/EntityFramework.MicrosoftSqlServer.xml"
       ]
     },
-    "EntityFramework.Relational/7.0.0-rc1-15948": {
+    "EntityFramework.Relational/7.0.0-rc1-15950": {
       "type": "package",
       "serviceable": true,
-      "sha512": "+N1AQVshmv+aJesw9MujbIM3NLznDvbluT1kQ9JunmKTHY0YaZNm4aGmhFYexdRmWtyk7VOQBIpP2EyRY+sWrA==",
+      "sha512": "zJxvHp7kQvJq79aPxex7xQK9TF0tsqyIeFZEK0uKW9qToxDoN+IlqcDyKNXK1rCYLtPwiebKtpIpcaewpY46sA==",
       "files": [
-        "EntityFramework.Relational.7.0.0-rc1-15948.nupkg",
-        "EntityFramework.Relational.7.0.0-rc1-15948.nupkg.sha512",
+        "EntityFramework.Relational.7.0.0-rc1-15950.nupkg",
+        "EntityFramework.Relational.7.0.0-rc1-15950.nupkg.sha512",
         "EntityFramework.Relational.nuspec",
         "lib/dnxcore50/EntityFramework.Relational.dll",
         "lib/dnxcore50/EntityFramework.Relational.xml",
@@ -5201,17 +5201,17 @@
         "Microsoft.AspNet.DataProtection.Abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNet.Diagnostics.Abstractions/1.0.0-rc1-15852": {
+    "Microsoft.AspNet.Diagnostics.Abstractions/1.0.0-rc1-15854": {
       "type": "package",
       "serviceable": true,
-      "sha512": "efDwYsdBX0gQ5evGBqncQ7T/fC22urJ1kkmUMv3JCOdlMeqmVEfVuoW9sAlz60I3oUW2XxB+9/lZ+3U0xgjOBg==",
+      "sha512": "55b3f7aZir713jb6J/2d08fRs0YuR492Gd2e2VEqp/yx8rc9cYVsB+o9H14zrMIhGO6/nOhR4pBFNABLeeVLNA==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Diagnostics.Abstractions.dll",
         "lib/dnx451/Microsoft.AspNet.Diagnostics.Abstractions.xml",
         "lib/dnxcore50/Microsoft.AspNet.Diagnostics.Abstractions.dll",
         "lib/dnxcore50/Microsoft.AspNet.Diagnostics.Abstractions.xml",
-        "Microsoft.AspNet.Diagnostics.Abstractions.1.0.0-rc1-15852.nupkg",
-        "Microsoft.AspNet.Diagnostics.Abstractions.1.0.0-rc1-15852.nupkg.sha512",
+        "Microsoft.AspNet.Diagnostics.Abstractions.1.0.0-rc1-15854.nupkg",
+        "Microsoft.AspNet.Diagnostics.Abstractions.1.0.0-rc1-15854.nupkg.sha512",
         "Microsoft.AspNet.Diagnostics.Abstractions.nuspec"
       ]
     },
@@ -5333,31 +5333,31 @@
         "Microsoft.AspNet.Http.Features.nuspec"
       ]
     },
-    "Microsoft.AspNet.Identity/3.0.0-rc1-15868": {
+    "Microsoft.AspNet.Identity/3.0.0-rc1-15870": {
       "type": "package",
       "serviceable": true,
-      "sha512": "6Ex0APE6RhcxNSZEJXFXtLfifoaMZBdKZEH1AfChU2Ire16yi4/cR6pVDsA4DxBaPlWf1ZmNHLIDkxTguITWWA==",
+      "sha512": "RJ4OMSvby/b4cIxu+9F35bdZOmWo0U14nb9jqhyTFc83H81iVFYyMF5O/TWUHrqOo6efbhAy66WvEuJkAgQJWA==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Identity.dll",
         "lib/dnx451/Microsoft.AspNet.Identity.xml",
         "lib/dnxcore50/Microsoft.AspNet.Identity.dll",
         "lib/dnxcore50/Microsoft.AspNet.Identity.xml",
-        "Microsoft.AspNet.Identity.3.0.0-rc1-15868.nupkg",
-        "Microsoft.AspNet.Identity.3.0.0-rc1-15868.nupkg.sha512",
+        "Microsoft.AspNet.Identity.3.0.0-rc1-15870.nupkg",
+        "Microsoft.AspNet.Identity.3.0.0-rc1-15870.nupkg.sha512",
         "Microsoft.AspNet.Identity.nuspec"
       ]
     },
-    "Microsoft.AspNet.Identity.EntityFramework/3.0.0-rc1-15868": {
+    "Microsoft.AspNet.Identity.EntityFramework/3.0.0-rc1-15870": {
       "type": "package",
       "serviceable": true,
-      "sha512": "tpTAm/3nRFebKKXavyTrW/OebKKcfk/woCP3V0lIa8gRjvCekVn6IIX4ggP5ziHfV88OQgKbCfR37K4djvCu+Q==",
+      "sha512": "Cye76zFNhaQEHNMwNHPfLxHyY0FGTpeRqH3mfKIMOeX2RKMpCgExShhJF1qXbuqE1hlBL1PO3MfobRwVAl3RYg==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Identity.EntityFramework.dll",
         "lib/dnx451/Microsoft.AspNet.Identity.EntityFramework.xml",
         "lib/dnxcore50/Microsoft.AspNet.Identity.EntityFramework.dll",
         "lib/dnxcore50/Microsoft.AspNet.Identity.EntityFramework.xml",
-        "Microsoft.AspNet.Identity.EntityFramework.3.0.0-rc1-15868.nupkg",
-        "Microsoft.AspNet.Identity.EntityFramework.3.0.0-rc1-15868.nupkg.sha512",
+        "Microsoft.AspNet.Identity.EntityFramework.3.0.0-rc1-15870.nupkg",
+        "Microsoft.AspNet.Identity.EntityFramework.3.0.0-rc1-15870.nupkg.sha512",
         "Microsoft.AspNet.Identity.EntityFramework.nuspec"
       ]
     },
@@ -5389,136 +5389,136 @@
         "Microsoft.AspNet.Localization.nuspec"
       ]
     },
-    "Microsoft.AspNet.Mvc/6.0.0-rc1-16032": {
+    "Microsoft.AspNet.Mvc/6.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "wOJorWNlccWIQ1lbllHbhVKKElXMZ8+1a2yt/DWUYSo/2G1DzymcLEkaLN1rWiIy3cJKZdOtbiffaxF/3iIozQ==",
+      "sha512": "rQGfU+WPLiyxAeadqwCG9/W5+lCuOaXWpA73IrYgXqvYzY0gNhO2HaOPK36tnnECd8cK+2QYHrVQeEmg0bLAwg==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Mvc.dll",
         "lib/dnx451/Microsoft.AspNet.Mvc.xml",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.dll",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.xml",
-        "Microsoft.AspNet.Mvc.6.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.Mvc.6.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.6.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.Mvc.6.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.Mvc.nuspec"
       ]
     },
-    "Microsoft.AspNet.Mvc.Abstractions/6.0.0-rc1-16032": {
+    "Microsoft.AspNet.Mvc.Abstractions/6.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "Om7+G+OY2sPbk6XQhy6X2YyIPiBWfbO33nqMSBgQyZ8xIq2jAMZHyHHnwnPgz7sWZ514/po11WACeungt3LxUQ==",
+      "sha512": "ltaB4iDVnmJcNbnKSO6XbgWz8E/S7mW7RKXyFil0fd1Yoo8D7aTVOJ+iLqF5eoQaL0bnG2EVjwzRlQReQoOvGA==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Mvc.Abstractions.dll",
         "lib/dnx451/Microsoft.AspNet.Mvc.Abstractions.xml",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Abstractions.dll",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Abstractions.xml",
-        "Microsoft.AspNet.Mvc.Abstractions.6.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.Mvc.Abstractions.6.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.Abstractions.6.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.Mvc.Abstractions.6.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.Mvc.Abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNet.Mvc.ApiExplorer/6.0.0-rc1-16032": {
+    "Microsoft.AspNet.Mvc.ApiExplorer/6.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "b2lYS3agcH48Wx7U2jv92xSAJs40BMiF++vpyXkc5UZ5JsfLkym1qtuJGahd/ss6BXVBZPgsPq5/TjI5ykQKiw==",
+      "sha512": "4cerBAiLRS3mxMxdlHbtRMmE8vxhQxDcy30hlgZ0hgqKRJWaESKqs0mmvNS48grDxZfdImV4QFSt0WlQNEhPmw==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Mvc.ApiExplorer.dll",
         "lib/dnx451/Microsoft.AspNet.Mvc.ApiExplorer.xml",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.ApiExplorer.dll",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.ApiExplorer.xml",
-        "Microsoft.AspNet.Mvc.ApiExplorer.6.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.Mvc.ApiExplorer.6.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.ApiExplorer.6.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.Mvc.ApiExplorer.6.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.Mvc.ApiExplorer.nuspec"
       ]
     },
-    "Microsoft.AspNet.Mvc.Core/6.0.0-rc1-16032": {
+    "Microsoft.AspNet.Mvc.Core/6.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "jMu79HDs9A0P750WfMKXlPIZg0n7BpRvL89DdoFzV8PMrRFd/3FrM3NcqprzKnU734tXSTGi6+Zn1xa6GRWejg==",
+      "sha512": "mTXOSa9fFguQtX2qr5nRA8juyAMpU8HAyVuvzEDarDbPe9OX/YAZPNrMjoOGYCV9gpvfB6oW1dCertK1F8TxHw==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Mvc.Core.dll",
         "lib/dnx451/Microsoft.AspNet.Mvc.Core.xml",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Core.dll",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Core.xml",
-        "Microsoft.AspNet.Mvc.Core.6.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.Mvc.Core.6.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.Core.6.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.Mvc.Core.6.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.Mvc.Core.nuspec"
       ]
     },
-    "Microsoft.AspNet.Mvc.Cors/6.0.0-rc1-16032": {
+    "Microsoft.AspNet.Mvc.Cors/6.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "zG6KxIRKlFXLgoET4l1/a1bHltC5mxDo/b7VPXz0Fp2bb78EKYClFn4OcZCvNW+a/3Msm9Dphk8dxVy7nsAjgA==",
+      "sha512": "mV/5TaRE9XozPqOTq6nUZ3bNbnyqZ7mx8gW1Ug6g7ZQTI/4884HLeEWgK6dkgp7XL4gZqvJd2WxwtPC7VQCQQA==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Mvc.Cors.dll",
         "lib/dnx451/Microsoft.AspNet.Mvc.Cors.xml",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Cors.dll",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Cors.xml",
-        "Microsoft.AspNet.Mvc.Cors.6.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.Mvc.Cors.6.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.Cors.6.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.Mvc.Cors.6.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.Mvc.Cors.nuspec"
       ]
     },
-    "Microsoft.AspNet.Mvc.DataAnnotations/6.0.0-rc1-16032": {
+    "Microsoft.AspNet.Mvc.DataAnnotations/6.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "8ycczYsRXlx4LADlHHEOuEqWHfoKw6nCADUk8xoMXmIR9MIrKWg5aoKTR7i49OQEB3bxvRRoeQM/plg/J9UQ2g==",
+      "sha512": "RBc5Jzpw61sNYINUSgo6hoNCz5CKFT1J3Vr7DIkt+JZ/3d5c5RuVuxAi2nB4fQKJ1W21ryVj46ilzd/2tVqtJQ==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Mvc.DataAnnotations.dll",
         "lib/dnx451/Microsoft.AspNet.Mvc.DataAnnotations.xml",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.DataAnnotations.dll",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.DataAnnotations.xml",
-        "Microsoft.AspNet.Mvc.DataAnnotations.6.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.Mvc.DataAnnotations.6.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.DataAnnotations.6.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.Mvc.DataAnnotations.6.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.Mvc.DataAnnotations.nuspec"
       ]
     },
-    "Microsoft.AspNet.Mvc.Formatters.Json/6.0.0-rc1-16032": {
+    "Microsoft.AspNet.Mvc.Formatters.Json/6.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "mSuECZMgDYh6ASLMLjzhcRgfxGqsMvf0u/qbxS2RCKRnA0A6wx/4k9ofP4RnICUgNaIrumF2T9aVJF0mO0e6jA==",
+      "sha512": "KUT0xGpitXUBOGEwjqQpFmSsPtSkUsd1INF8ClsGPZieO3OYQ+RglAVxNwTT3TqorFxawke5sM5OVg49lnejbw==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Mvc.Formatters.Json.dll",
         "lib/dnx451/Microsoft.AspNet.Mvc.Formatters.Json.xml",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Formatters.Json.dll",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Formatters.Json.xml",
-        "Microsoft.AspNet.Mvc.Formatters.Json.6.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.Mvc.Formatters.Json.6.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.Formatters.Json.6.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.Mvc.Formatters.Json.6.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.Mvc.Formatters.Json.nuspec"
       ]
     },
-    "Microsoft.AspNet.Mvc.Localization/6.0.0-rc1-16032": {
+    "Microsoft.AspNet.Mvc.Localization/6.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "tJvjuKEbVrLDowKpJl2fjRAyum4/thDWAbHLKAClIKCtFlJ6QE0fM8JbG6TCLu4K4/VYnugZm2ZziDJTgkxyDg==",
+      "sha512": "ocV5WX5DmFfQQ2JV8IOIVWPKZ7I9QHl1tZeXzV/H/k4gS3DV2It+0Kx16yG/sPzAHv+zxaPHa+Y3ffUt8zNJHg==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Mvc.Localization.dll",
         "lib/dnx451/Microsoft.AspNet.Mvc.Localization.xml",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Localization.dll",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Localization.xml",
-        "Microsoft.AspNet.Mvc.Localization.6.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.Mvc.Localization.6.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.Localization.6.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.Mvc.Localization.6.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.Mvc.Localization.nuspec"
       ]
     },
-    "Microsoft.AspNet.Mvc.Razor/6.0.0-rc1-16032": {
+    "Microsoft.AspNet.Mvc.Razor/6.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "yDj5Yh5P6FP+BnKCmAgExDCMX37tuAkeat+oayOfiGM1cRJDZ1vrqa4LaLorKz5BaEYw4hspeGnZOK3LnyENvA==",
+      "sha512": "/PH/SfcuQ4Y/l6PAi21D+Nyl7HUhuKLI+y1nSkrQcfCjn62tugex9zV5K0JO38iIIYn0GPEWuEz8azP7Pbkb2w==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Mvc.Razor.dll",
         "lib/dnx451/Microsoft.AspNet.Mvc.Razor.xml",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Razor.dll",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Razor.xml",
-        "Microsoft.AspNet.Mvc.Razor.6.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.Mvc.Razor.6.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.Razor.6.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.Mvc.Razor.6.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.Mvc.Razor.nuspec"
       ]
     },
-    "Microsoft.AspNet.Mvc.Razor.Host/6.0.0-rc1-16032": {
+    "Microsoft.AspNet.Mvc.Razor.Host/6.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "mkTn+vXY9T3H+E6JJ3JsWTpNqmeGSlx96TC6rpzIyg/o7REsTNH7LlsKkwNUYBYQXiFI+ftlxBT39pF1u5rKqQ==",
+      "sha512": "YkPDbbuZxMVLYwXFUMxbUnpWz2KRfnTxzHiu70zrGl2Xexg8cSxd4BBXrBNKlfmNwjPSLkFgBqFL3WxdRt4DJw==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Mvc.Razor.Host.dll",
         "lib/dnx451/Microsoft.AspNet.Mvc.Razor.Host.xml",
@@ -5526,36 +5526,36 @@
         "lib/dnxcore50/Microsoft.AspNet.Mvc.Razor.Host.xml",
         "lib/net45/Microsoft.AspNet.Mvc.Razor.Host.dll",
         "lib/net45/Microsoft.AspNet.Mvc.Razor.Host.xml",
-        "Microsoft.AspNet.Mvc.Razor.Host.6.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.Mvc.Razor.Host.6.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.Razor.Host.6.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.Mvc.Razor.Host.6.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.Mvc.Razor.Host.nuspec"
       ]
     },
-    "Microsoft.AspNet.Mvc.ViewFeatures/6.0.0-rc1-16032": {
+    "Microsoft.AspNet.Mvc.ViewFeatures/6.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "Ylg3XbsATBfaBjoa1Je4BMBSRHuunXNZw4ipZa4fhrWkETAbSV1hn0nU9iavfswH59klE+Astn3uFXUmiyjYqQ==",
+      "sha512": "pVn0lQZfnNaywCe8RWNQqnvxhsa0487uCpOBMm/b1+HT+evCuIMcUsht+etWXEtVO4PwoBV0y3R1eSp2raLVsQ==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Mvc.ViewFeatures.dll",
         "lib/dnx451/Microsoft.AspNet.Mvc.ViewFeatures.xml",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.ViewFeatures.dll",
         "lib/dnxcore50/Microsoft.AspNet.Mvc.ViewFeatures.xml",
-        "Microsoft.AspNet.Mvc.ViewFeatures.6.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.Mvc.ViewFeatures.6.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.ViewFeatures.6.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.Mvc.ViewFeatures.6.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.Mvc.ViewFeatures.nuspec"
       ]
     },
-    "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces/1.0.0-rc1-16032": {
+    "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces/1.0.0-rc1-16034": {
       "type": "package",
       "serviceable": true,
-      "sha512": "Scrc3Nr2NR81chsgSAnNeIdMpyTZ42ESBOiXygiW1YBz3GPyaJgFglFI852l+PVwzRMnH/IDyUFMey42kNAVKQ==",
+      "sha512": "wsyBwfQo0ZviCbp8HLhC48Ph5zN3U/vyXcJ1hk7iO5/l0SA2G3wQx9z9Ek8tDXT7Yyxkqq0xNp/S6KPeyyZChQ==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.PageExecutionInstrumentation.Interfaces.dll",
         "lib/dnx451/Microsoft.AspNet.PageExecutionInstrumentation.Interfaces.xml",
         "lib/dnxcore50/Microsoft.AspNet.PageExecutionInstrumentation.Interfaces.dll",
         "lib/dnxcore50/Microsoft.AspNet.PageExecutionInstrumentation.Interfaces.xml",
-        "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces.1.0.0-rc1-16032.nupkg",
-        "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces.1.0.0-rc1-16032.nupkg.sha512",
+        "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces.1.0.0-rc1-16034.nupkg",
+        "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces.1.0.0-rc1-16034.nupkg.sha512",
         "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces.nuspec"
       ]
     },
@@ -6894,7 +6894,7 @@
       "Microsoft.AspNet.Testing >= 1.0.0-*",
       "xunit.runner.aspnet >= 2.0.0-aspnet-*",
       "Moq >= 4.2.1507.118",
-      "CodeComb.AspNet.Localization >= 1.0.0-*"
+      "CodeComb.AspNet.Localization >= 2.0.0-*"
     ],
     "DNX,Version=v4.5.1": []
   }
