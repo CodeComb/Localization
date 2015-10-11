@@ -70,7 +70,7 @@ namespace CodeComb.AspNet.Localization.Tests
             // Arrange
             var req = new Mock<HttpRequest>();
             req.Setup(x => x.Headers)
-                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", "zh" } }));
+                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", new string[] { "zh" } } }));
             req.Setup(x => x.Cookies)
                 .Returns(new RequestCookiesCollection());
             var httpContext = new Mock<HttpContext>();
@@ -109,7 +109,7 @@ namespace CodeComb.AspNet.Localization.Tests
             // Arrange
             var req = new Mock<HttpRequest>();
             req.Setup(x => x.Headers)
-                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", "en-US" } }));
+                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", new string[] { "en-US" } } }));
             req.Setup(x => x.Cookies)
                 .Returns(new RequestCookiesCollection());
             var httpContext = new Mock<HttpContext>();
@@ -185,7 +185,7 @@ namespace CodeComb.AspNet.Localization.Tests
             // Arrange
             var req = new Mock<HttpRequest>();
             req.Setup(x => x.Headers)
-                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", "writing-test" } }));
+                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", new string[] { "writing-test" } } }));
             req.Setup(x => x.Cookies)
                 .Returns(new RequestCookiesCollection());
             var httpContext = new Mock<HttpContext>();
@@ -229,7 +229,7 @@ namespace CodeComb.AspNet.Localization.Tests
             // Arrange
             var req = new Mock<HttpRequest>();
             req.Setup(x => x.Headers)
-                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", "writing-test" } }));
+                .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", new string[] { "writing-test" } } }));
             req.Setup(x => x.Cookies)
                 .Returns(new RequestCookiesCollection());
             var httpContext = new Mock<HttpContext>();

@@ -21,9 +21,22 @@ namespace CodeComb.AspNet.Localization
         public string[] DetermineRequestCulture()
         {
             if (HttpContext.Request.Cookies[CookieField] == null)
-                return HttpContext.Request.Headers["Accept-Language"].ToArray();
+            {
+                var ret = new List<string>();
+                var tmp = HttpContext.Request.Headers["Accept-Language"].FirstOrDefault();
+                if (tmp == null)
+                    return new string[] { };
+                var split = tmp.Split(',');
+                foreach(var x in split)
+                {
+                    ret.Add(x.Split(';')[0]);
+                }
+                return ret.ToArray();
+            }
             else
+            {
                 return new string[] { HttpContext.Request.Cookies[CookieField].ToString() };
+            }
         }
     }
 }
