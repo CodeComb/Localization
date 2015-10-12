@@ -1,6 +1,6 @@
 ﻿{
   "title": "CodeComb.AspNet.Localization",
-  "version": "2.0.0-*",
+  "version": "2.0.0-beta8",
   "description": "ASP.Net vNext Localization Library",
   "copyright": "Harbin Code Comb Technology Co.,Ltd",
   "authors": [ "AmamiyaYuuko" ],
@@ -11,8 +11,8 @@
 
 
   "dependencies": {
-    "Microsoft.AspNet.Mvc": "6.0.0-*",
-    "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-*"
+    "Microsoft.AspNet.Mvc": "6.0.0-beta8",
+    "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-beta8"
   },
 
   "frameworks": {

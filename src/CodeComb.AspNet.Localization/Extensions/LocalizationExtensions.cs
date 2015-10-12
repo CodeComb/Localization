@@ -9,7 +9,7 @@ using CodeComb.AspNet.Localization;
 using CodeComb.AspNet.Localization.EntityFramework;
 using CodeComb.AspNet.Localization.Json;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace Microsoft.Framework.DependencyInjection
 {
     public static class LocalizationExtensions
     {
