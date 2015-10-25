@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Mvc.Infrastructure;
-using Microsoft.Dnx.Runtime;
+using Microsoft.Extensions.PlatformAbstractions;
 using CodeComb.AspNet.Localization;
 using CodeComb.AspNet.Localization.EntityFramework;
 using CodeComb.AspNet.Localization.Json;
