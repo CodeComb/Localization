@@ -18,7 +18,7 @@ namespace CodeComb.AspNet.Localization.Tests
             // Arrange
             var req = new Mock<HttpRequest>();
             req.Setup(x => x.Query)
-                .Returns(new ReadableStringCollection(new Dictionary<string, StringValues> { { "lang", "zh" } }));
+                .Returns(new QueryCollection(new Dictionary<string, StringValues> { { "lang", "zh" } }));
             var httpContext = new Mock<HttpContext>();
             httpContext.Setup(x => x.Request)
                 .Returns(req.Object);
@@ -40,7 +40,7 @@ namespace CodeComb.AspNet.Localization.Tests
             // Arrange
             var req = new Mock<HttpRequest>();
             req.Setup(x => x.Query)
-                .Returns(new ReadableStringCollection(new Dictionary<string, StringValues>()));
+                .Returns(new QueryCollection(new Dictionary<string, StringValues>()));
             var httpContext = new Mock<HttpContext>();
             httpContext.Setup(x => x.Request)
                 .Returns(req.Object);

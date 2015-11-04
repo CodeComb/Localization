@@ -68,7 +68,7 @@ namespace CodeComb.AspNet.Localization.Tests
             req.Setup(x => x.Headers)
                 .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", new string[] { "zh" } } }));
             req.Setup(x => x.Cookies)
-                .Returns(new RequestCookiesCollection());
+                .Returns(new RequestCookieCollection());
             var httpContext = new Mock<HttpContext>();
             httpContext.Setup(x => x.Request)
                 .Returns(req.Object);
@@ -107,7 +107,7 @@ namespace CodeComb.AspNet.Localization.Tests
             req.Setup(x => x.Headers)
                 .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", new string[] { "en-US" } } }));
             req.Setup(x => x.Cookies)
-                .Returns(new RequestCookiesCollection());
+                .Returns(new RequestCookieCollection());
             var httpContext = new Mock<HttpContext>();
             httpContext.Setup(x => x.Request)
                 .Returns(req.Object);
@@ -145,7 +145,7 @@ namespace CodeComb.AspNet.Localization.Tests
             req.Setup(x => x.Headers)
                 .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { }));
             req.Setup(x => x.Cookies)
-                .Returns(new RequestCookiesCollection());
+                .Returns(new RequestCookieCollection());
             var httpContext = new Mock<HttpContext>();
             httpContext.Setup(x => x.Request)
                 .Returns(req.Object);
@@ -183,7 +183,7 @@ namespace CodeComb.AspNet.Localization.Tests
             req.Setup(x => x.Headers)
                 .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", new string[] { "writing-test" } } }));
             req.Setup(x => x.Cookies)
-                .Returns(new RequestCookiesCollection());
+                .Returns(new RequestCookieCollection());
             var httpContext = new Mock<HttpContext>();
             httpContext.Setup(x => x.Request)
                 .Returns(req.Object);
@@ -227,7 +227,7 @@ namespace CodeComb.AspNet.Localization.Tests
             req.Setup(x => x.Headers)
                 .Returns(new HeaderDictionary(new Dictionary<string, StringValues> { { "Accept-Language", new string[] { "writing-test" } } }));
             req.Setup(x => x.Cookies)
-                .Returns(new RequestCookiesCollection());
+                .Returns(new RequestCookieCollection());
             var httpContext = new Mock<HttpContext>();
             httpContext.Setup(x => x.Request)
                 .Returns(req.Object);

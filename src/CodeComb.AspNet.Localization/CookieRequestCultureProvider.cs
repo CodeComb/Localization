@@ -20,7 +20,7 @@ namespace CodeComb.AspNet.Localization
 
         public string[] DetermineRequestCulture()
         {
-            if (HttpContext.Request.Cookies[CookieField].Count == 0)
+            if (HttpContext.Request.Cookies[CookieField] != null)
             {
                 var ret = new List<string>();
                 var tmp = HttpContext.Request.Headers["Accept-Language"].FirstOrDefault();
