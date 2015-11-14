@@ -33,8 +33,8 @@ namespace CodeComb.AspNet.Localization.Tests
             var collection = new ServiceCollection();
             collection.AddJsonLocalization()
                 .AddCookieCulture()
-                .AddInstance(accessor.Object)
-                .AddInstance(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+                .AddSingleton(accessor.Object)
+                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
 
             var service = collection.BuildServiceProvider();
 
@@ -67,8 +67,8 @@ namespace CodeComb.AspNet.Localization.Tests
             var collection = new ServiceCollection();
             collection.AddJsonLocalization()
                 .AddCookieCulture()
-                .AddInstance(accessor.Object)
-                .AddInstance(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+                .AddSingleton(accessor.Object)
+                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
 
             var service = collection.BuildServiceProvider();
 
@@ -101,8 +101,8 @@ namespace CodeComb.AspNet.Localization.Tests
             var collection = new ServiceCollection();
             collection.AddJsonLocalization()
                 .AddCookieCulture()
-                .AddInstance(accessor.Object)
-                .AddInstance(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+                .AddSingleton(accessor.Object)
+                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
 
             var service = collection.BuildServiceProvider();
 
@@ -135,8 +135,8 @@ namespace CodeComb.AspNet.Localization.Tests
             var collection = new ServiceCollection();
             collection.AddJsonLocalization()
                 .AddCookieCulture()
-                .AddInstance(accessor.Object)
-                .AddInstance(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+                .AddSingleton(accessor.Object)
+                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
 
             var service = collection.BuildServiceProvider();
 
@@ -175,8 +175,8 @@ namespace CodeComb.AspNet.Localization.Tests
             var collection = new ServiceCollection();
             collection.AddJsonLocalization()
                 .AddCookieCulture()
-                .AddInstance(accessor.Object)
-                .AddInstance(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+                .AddSingleton(accessor.Object)
+                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
 
             var service = collection.BuildServiceProvider();
 
