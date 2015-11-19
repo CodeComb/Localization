@@ -15,7 +15,7 @@ namespace CodeComb.AspNet.Localization.Internal
             _collection = collection;
         }
 
-        public override IList<CultureInfo> Collection
+        public override IEnumerable<CultureInfo> Collection
         {
             get
             {

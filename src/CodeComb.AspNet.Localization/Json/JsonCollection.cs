@@ -33,7 +33,7 @@ namespace CodeComb.AspNet.Localization.Json
             Refresh();
         }
 
-        public override IList<CultureInfo> Collection
+        public override IEnumerable<CultureInfo> Collection
         {
             get
             {

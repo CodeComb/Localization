@@ -24,6 +24,7 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             return self
                 .AddScoped<ILocalizationDbContext<TKey>, TContext>()
+                .AddScoped<EFLocalizationManager<TKey>>()
                 .AddSingleton<ILocalizationStringCollection, EFCollection<TKey>>();
         }
 

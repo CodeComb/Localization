@@ -21,7 +21,7 @@ namespace CodeComb.AspNet.Localization
             CultureProvider = cultureProvider;
         }
 
-        public string this[string identifier, params object[] objects]
+        public virtual string this[string identifier, params object[] objects]
         {
             get
             {
@@ -29,7 +29,7 @@ namespace CodeComb.AspNet.Localization
             }
         }
 
-        public abstract IList<CultureInfo> Collection { get; }
+        public abstract IEnumerable<CultureInfo> Collection { get; }
 
         public abstract void Refresh();
 
