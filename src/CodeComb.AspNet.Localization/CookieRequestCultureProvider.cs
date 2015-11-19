@@ -20,7 +20,7 @@ namespace CodeComb.AspNet.Localization
 
         public string[] DetermineRequestCulture()
         {
-            if (HttpContext.Request.Cookies[CookieField] == null)
+            if (string.IsNullOrEmpty(HttpContext.Request.Cookies[CookieField]))
             {
                 var ret = new List<string>();
                 var tmp = HttpContext.Request.Headers["Accept-Language"].FirstOrDefault();
@@ -28,14 +28,12 @@ namespace CodeComb.AspNet.Localization
                     return new string[] { };
                 var split = tmp.Split(',');
                 foreach(var x in split)
-                {
                     ret.Add(x.Split(';')[0]);
-                }
                 return ret.ToArray();
             }
             else
             {
-                return new string[] { HttpContext.Request.Cookies[CookieField].ToString() };
+                return new string[] { HttpContext.Request.Cookies[CookieField] };
             }
         }
     }

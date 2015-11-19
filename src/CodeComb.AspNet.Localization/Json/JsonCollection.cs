@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
-using Microsoft.Framework.DependencyInjection;
-using Microsoft.Dnx.Runtime;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
 using Newtonsoft.Json;
 
 namespace CodeComb.AspNet.Localization.Json
@@ -33,7 +33,7 @@ namespace CodeComb.AspNet.Localization.Json
             Refresh();
         }
 
-        public override IList<CultureInfo> Collection
+        public override IEnumerable<CultureInfo> Collection
         {
             get
             {

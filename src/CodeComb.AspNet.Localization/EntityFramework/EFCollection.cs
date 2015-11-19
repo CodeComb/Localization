@@ -10,23 +10,44 @@ namespace CodeComb.AspNet.Localization.EntityFramework
     public class EFCollection<TKey> : LocalizationStringCollection
         where TKey : IEquatable<TKey>
     {
-        private List<CultureInfo> _Collection { get; set; }
-
-        private ILocalizationDbContext<TKey> _DbContext { get; set; }
+        public ILocalizationDbContext<TKey> _DbContext { get; set; }
 
         public EFCollection(ILocalizationDbContext<TKey> DbContext, IRequestCultureProvider cultureProvider) : base(cultureProvider)
         {
-            _Collection = new List<CultureInfo>();
             _DbContext = DbContext;
             Refresh();
         }
 
-        public override IList<CultureInfo> Collection
+        public override IEnumerable<CultureInfo> Collection
         {
             get
             {
-                return _Collection;
+                return _DbContext.LocalizationCultureInfo;
             }
+        }
+
+        public override string GetString(string culture, string identifier , params object[] objects)
+        {
+            var tmp = _DbContext.LocalizationString
+                .Include(x => x.CultureInfo)
+                .ThenInclude(x => x._Culture)
+                .Where(x => x.Key == identifier && x.CultureInfo._Culture.Where(y => y.CultureString == culture).Count() > 0)
+                .Select(x => x.Value)
+                .FirstOrDefault() ?? identifier;
+            return string.Format(tmp, objects);
+        }
+
+        public override string SingleCulture(string[] culture)
+        {
+            foreach (var x in culture)
+                if (_DbContext.LocalizationCulture.Where(y => y.CultureString == x).Count() > 0)
+                    return x;
+            return _DbContext.LocalizationCultureInfo
+                .Include(x => x._Culture)
+                .Where(x => x.IsDefault)
+                .First()
+                ._Culture.Select(x => x.CultureString)
+                .First();
         }
 
         private Dictionary<string,string> ConvertToDictionary(ICollection<LocalizedString<TKey>> src)
@@ -41,39 +62,10 @@ namespace CodeComb.AspNet.Localization.EntityFramework
 
         public override void Refresh()
         {
-            _Collection = new List<CultureInfo>();
-
-            var info = _DbContext.LocalizationCultureInfo
-                .Include(x => x._Culture)
-                .Include(x => x._Strings)
-                .ToList();
-
-            foreach(var x in info)
-            {
-                _Collection.Add(new CultureInfo
-                {
-                    Culture = x._Culture.Select(y => y.CultureString).ToList(),
-                    IsDefault = x.IsDefault,
-                    Set = x.Set,
-                    LocalizedStrings = ConvertToDictionary(x._Strings),
-                    Identifier = x.Id.ToString()
-                });
-            }
         }
 
         public override void RemoveString(string Identifier)
         {
-            foreach (var x in _Collection)
-            {
-                try
-                {
-                    x.LocalizedStrings.Remove(Identifier);
-                }
-                catch
-                {
-                }
-            }
-
             var src = _DbContext.LocalizationString
                 .Where(x => x.Key == Identifier)
                 .ToList();
@@ -86,11 +78,14 @@ namespace CodeComb.AspNet.Localization.EntityFramework
 
         public override void SetString(string culture, string identifier, string Content)
         {
-            var obj = _Collection.Where(x => x.Culture.Contains(culture)).FirstOrDefault();
+            var obj = _DbContext.LocalizationCulture
+                .Include(x => x.CultureInfo)
+                .Where(x => x.CultureString == culture)
+                .Select(x => x.CultureInfo)
+                .FirstOrDefault();
             if (obj == null)
                 throw new KeyNotFoundException();
-            obj.LocalizedStrings[identifier] = Content;
-            var id = obj.Identifier;
+            var id = obj.Id;
             var str = _DbContext.LocalizationString
                 .Where(x => x.CultureInfoId.Equals(id) && x.Key == identifier)
                 .ToList();
@@ -107,17 +102,17 @@ namespace CodeComb.AspNet.Localization.EntityFramework
                 dynamic newId;
                 if (typeof(TKey) == typeof(Guid))
                 {
-                    cultureId = Guid.Parse(obj.Identifier);
+                    cultureId = Guid.Parse(obj.Id.ToString());
                     newId = Guid.NewGuid();
                 }
                 else if (typeof(TKey) == typeof(long))
                 {
-                    cultureId = Convert.ToInt64(obj.Identifier);
+                    cultureId = Convert.ToInt64(obj.Id);
                     newId = -1;
                 }
                 else if (typeof(TKey) == typeof(int))
                 {
-                    cultureId = Convert.ToInt32(obj.Identifier);
+                    cultureId = Convert.ToInt32(obj.Id);
                     newId = -1;
                 }
                 else

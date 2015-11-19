@@ -7,7 +7,7 @@ namespace CodeComb.AspNet.Localization
 {
     public interface ILocalizationStringCollection
     {
-        IList<CultureInfo> Collection { get; }
+        IEnumerable<CultureInfo> Collection { get; }
         string this[string identifier, params object[] objects] { get; }
         string GetString(string culture, string identifier, params object[] objects);
         void SetString(string culture, string identifier, string Content);

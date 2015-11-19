@@ -21,11 +21,7 @@ namespace CodeComb.AspNet.Localization.EntityFramework
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<CultureInfo<TKey>>(e =>
-            {
-                e.Index(x => x.IsDefault);
-                e.Index(x => x.Set);
-            });
+            builder.BuildLocalization<TKey>();
         }
     }
 }
