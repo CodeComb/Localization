@@ -81,7 +81,7 @@ namespace CodeComb.AspNet.Localization.Tests
                 .AddEFLocalization<LocalizationContext, Guid>()
                 .AddCookieCulture()
                 .AddSingleton(accessor.Object)
-                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>())
+                .AddSingleton(PlatformServices.Default.Application)
                 .AddEntityFramework()
                 .AddInMemoryDatabase()
                 .AddDbContext<LocalizationContext>();
@@ -119,7 +119,7 @@ namespace CodeComb.AspNet.Localization.Tests
             collection.AddEFLocalization<LocalizationContext, Guid>()
                 .AddCookieCulture()
                 .AddSingleton(accessor.Object)
-                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>())
+                .AddSingleton(PlatformServices.Default.Application)
                 .AddEntityFramework()
                 .AddInMemoryDatabase()
                 .AddDbContext<LocalizationContext>();
@@ -157,7 +157,7 @@ namespace CodeComb.AspNet.Localization.Tests
             collection.AddEFLocalization<LocalizationContext, Guid>()
                 .AddCookieCulture()
                 .AddSingleton(accessor.Object)
-                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>())
+                .AddSingleton(PlatformServices.Default.Application)
                 .AddEntityFramework()
                 .AddInMemoryDatabase()
                 .AddDbContext<LocalizationContext>();
@@ -195,7 +195,7 @@ namespace CodeComb.AspNet.Localization.Tests
             collection.AddEFLocalization<LocalizationContext, Guid>()
                 .AddCookieCulture()
                 .AddSingleton(accessor.Object)
-                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>())
+                .AddSingleton(PlatformServices.Default.Application)
                 .AddEntityFramework()
                 .AddInMemoryDatabase()
                 .AddDbContext<LocalizationContext>();
@@ -239,7 +239,7 @@ namespace CodeComb.AspNet.Localization.Tests
             collection.AddEFLocalization<LocalizationContext, Guid>()
                 .AddCookieCulture()
                 .AddSingleton(accessor.Object)
-                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>())
+                .AddSingleton(PlatformServices.Default.Application)
                 .AddEntityFramework()
                 .AddInMemoryDatabase()
                 .AddDbContext<LocalizationContext>();

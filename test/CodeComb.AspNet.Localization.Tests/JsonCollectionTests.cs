@@ -34,7 +34,7 @@ namespace CodeComb.AspNet.Localization.Tests
             collection.AddJsonLocalization()
                 .AddCookieCulture()
                 .AddSingleton(accessor.Object)
-                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+                .AddSingleton(PlatformServices.Default.Application);
 
             var service = collection.BuildServiceProvider();
 
@@ -68,7 +68,7 @@ namespace CodeComb.AspNet.Localization.Tests
             collection.AddJsonLocalization()
                 .AddCookieCulture()
                 .AddSingleton(accessor.Object)
-                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+                .AddSingleton(PlatformServices.Default.Application);
 
             var service = collection.BuildServiceProvider();
 
@@ -102,7 +102,7 @@ namespace CodeComb.AspNet.Localization.Tests
             collection.AddJsonLocalization()
                 .AddCookieCulture()
                 .AddSingleton(accessor.Object)
-                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+                .AddSingleton(PlatformServices.Default.Application);
 
             var service = collection.BuildServiceProvider();
 
@@ -136,7 +136,7 @@ namespace CodeComb.AspNet.Localization.Tests
             collection.AddJsonLocalization()
                 .AddCookieCulture()
                 .AddSingleton(accessor.Object)
-                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+                .AddSingleton(PlatformServices.Default.Application);
 
             var service = collection.BuildServiceProvider();
 
@@ -176,7 +176,7 @@ namespace CodeComb.AspNet.Localization.Tests
             collection.AddJsonLocalization()
                 .AddCookieCulture()
                 .AddSingleton(accessor.Object)
-                .AddSingleton(CallContextServiceLocator.Locator.ServiceProvider.GetRequiredService<IApplicationEnvironment>());
+                .AddSingleton(PlatformServices.Default.Application);
 
             var service = collection.BuildServiceProvider();
 
